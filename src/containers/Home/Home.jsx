@@ -1,5 +1,5 @@
 import React from 'react';
-import Boton from "../../components/Boton/Boton";
+
 import "./Home.css";
 
 
