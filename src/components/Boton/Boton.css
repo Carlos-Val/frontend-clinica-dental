@@ -1,0 +1,16 @@
+.megaBoton{
+    height: 2em;
+    width: 4em;
+    background-color: lightgoldenrodyellow;
+    border-radius: .3em;
+    transition: 0.5s;
+    margin-right: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.megaBoton:hover{
+    transition: 0.5s;
+    background-color: lightsalmon;
+
+}
