@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from "react";
 import Boton from "../../components/Boton/Boton";
+import Input from "../../components/Input/Input";
+
 
 import checkError from "../../utiles/utiles";
 
@@ -79,26 +81,17 @@ const Register = () =>{
             
             {/* <pre>{JSON.stringify(customer,null,2)}</pre> */}
             <div className="formRegistro">
-                <div className="nombreCompleto">
-                    <div>Nombre:</div>
-                    <div>Primer apellido:</div>
-                    <div>Segundo apellido:</div>
-                </div>
-                <div className="inputsNombre">
-                    <input type="text" maxLength="30" placeholder="" name="nombre" onChange={manejaEstado}></input>
-                    <input type="email" maxLength="30" placeholder="" name="apellido1" onChange={manejaEstado}></input>
-                    <input type="password" maxLength="12" placeholder="" name="apellido2" onChange={manejaEstado}></input>
-                </div>
-           
-           
-            {/* <p>Nombre : </p>
-            <input type="text" maxLength="30" placeholder="" name="nombre" onChange={manejaEstado}></input>
-            <p>Email : </p>
-            <input type="email" maxLength="30" placeholder="" name="email" onChange={manejaEstado}></input>
-            <p>Password : </p>
-            <input type="password" maxLength="12" placeholder="" name="password" onChange={manejaEstado}></input> */}
+                <Input title="Nombre" type="text" maxLength="30" name="nombre" onChange={manejaEstado} />
+                <Input title="Primer Apellido" type="text"  maxLength="30" name="apellido1" onChange={manejaEstado}/>
+                <Input title="Segundo Apellido" type="text"  maxLength="30" name="apellido2" onChange={manejaEstado} />
+                <Input title="DNI" type="text"  maxLength="10" name="dni" onChange={manejaEstado}/>
+                <Input title="Teléfono" type="text"  maxLength="11" name="telefono" onChange={manejaEstado} />
+                <Input title="Email" type="text"  maxLength="30" name="email" onChange={manejaEstado}/>
+                <Input title="Contraseña" type="password"  maxLength="12" name="password" onChange={manejaEstado}/>
+
             </div>
-            {/* <button onClick={()=> enviaDatos()}>Envia datos al backend</button> */}
+            <button onClick={()=> enviaDatos()}>Envia datos al backend</button>
+            <div className="mensajeError">{mensaje}</div>
 
         </div>
     )
