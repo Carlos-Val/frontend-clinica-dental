@@ -1,16 +1,13 @@
 import React from 'react';
 
 import "./Home.css";
-
+import clinica from"../../img/clinica.jpg";
 
 const Home = (props) => {
 
     return(
         <div className= "vistaHome">
-            Buenas gracias y muchas noches
-            
-
-
+            <img src={clinica} alt=""/>
         </div>
     )
 
