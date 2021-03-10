@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import Boton from "../../components/Boton/Boton";
+import Input from "../../components/Input/Input";
 
 import checkError from "../../utiles/utiles";
 
@@ -79,6 +80,13 @@ const Register = () =>{
             A tomar por cleta la biciculo
             {/* <pre>{JSON.stringify(customer,null,2)}</pre> */}
             <div className="formRegistro">
+                <Input title="Nombre" type="text" name="nombre" onChange={manejaEstado} />
+                <Input title="Primer Apellido" type="text" name="apellido1" onChange={manejaEstado}/>
+                <Input title="Segundo Apellido" type="text" name="apellido2" onChange={manejaEstado} />
+                <Input title="DNI" type="text" name="dni" onChange={manejaEstado}/>
+                <Input title="Teléfono" type="text" name="telefono" onChange={manejaEstado} />
+                <Input title="Email" type="text" name="email" onChange={manejaEstado}/>
+                <Input title="Contraseña" type="text" name="password" onChange={manejaEstado}/>
 
             </div>
 

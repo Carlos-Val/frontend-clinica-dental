@@ -1,5 +1,15 @@
+.vistaRegister{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .formRegistro {
-    width: 100%;
+    width: 35em;
     height: 30em;
     background-color: blue;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+   
+
 }
