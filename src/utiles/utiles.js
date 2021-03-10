@@ -11,9 +11,49 @@ const checkError = (datosCheck) => {
             case 'nombre' : 
 
                 // eslint-disable-next-line
-                if(! /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/.test(datosCheck[field])){
+                if(! /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/.test(datosCheck[field])){
 
                     return "El nombre introducido solo puede contener letras";
+                }
+
+            break;
+
+            case 'apellido1' : 
+
+                // eslint-disable-next-line
+                if(! /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/.test(datosCheck[field])){
+
+                    return "El primer apellido introducido solo puede contener letras";
+                }
+
+            break;
+
+            case 'apellido2' : 
+
+                // eslint-disable-next-line
+                if(! /^[a-zA-ZÀ-ÿ\u00f1\u00d1]+(\s*[a-zA-ZÀ-ÿ\u00f1\u00d1]*)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+$/.test(datosCheck[field])){
+
+                    return "El segundo apellido introducido solo puede contener letras";
+                }
+
+            break;
+
+            case 'dni' : 
+
+                // eslint-disable-next-line
+                if(! /^[0-9]{8,8}[A-Za-z]$/.test(datosCheck[field])){
+
+                    return "El dni introducido es incorrecto";
+                }
+
+            break;
+
+            case 'telefono' : 
+
+                // eslint-disable-next-line
+                if(! /^[0-9]{9,11}$/.test(datosCheck[field])){
+
+                    return "El telefono introducido solo puede contener números";
                 }
 
             break;

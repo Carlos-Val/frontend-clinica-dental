@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import Boton from "../../components/Boton/Boton";
 import Input from "../../components/Input/Input";
 
+
 import checkError from "../../utiles/utiles";
 
 import "./Register.css";
@@ -80,22 +81,21 @@ const Register = () =>{
 
     return(
         <div className="vistaRegister">
-           A tomar por cleta la biciculo
-            <pre>{JSON.stringify(customer,null,2)}</pre>
+            
+            {/* <pre>{JSON.stringify(customer,null,2)}</pre> */}
             <div className="formRegistro">
-                <Input title="Nombre" type="text" name="nombre" onChange={manejaEstado} />
-                <Input title="Primer Apellido" type="text" name="apellido1" onChange={manejaEstado}/>
-                <Input title="Segundo Apellido" type="text" name="apellido2" onChange={manejaEstado} />
-                <Input title="DNI" type="text" name="dni" onChange={manejaEstado}/>
-                <Input title="Teléfono" type="text" name="telefono" onChange={manejaEstado} />
-                <Input title="Email" type="text" name="email" onChange={manejaEstado}/>
-                <Input title="Contraseña" type="text" name="password" onChange={manejaEstado}/>
+                <Input title="Nombre" type="text" maxLength="30" name="nombre" onChange={manejaEstado} />
+                <Input title="Primer Apellido" type="text"  maxLength="30" name="apellido1" onChange={manejaEstado}/>
+                <Input title="Segundo Apellido" type="text"  maxLength="30" name="apellido2" onChange={manejaEstado} />
+                <Input title="DNI" type="text"  maxLength="10" name="dni" onChange={manejaEstado}/>
+                <Input title="Teléfono" type="text"  maxLength="11" name="telefono" onChange={manejaEstado} />
+                <Input title="Email" type="text"  maxLength="30" name="email" onChange={manejaEstado}/>
+                <Input title="Contraseña" type="password"  maxLength="12" name="password" onChange={manejaEstado}/>
 
 
             </div>
-
             <button onClick={()=> enviaDatos()}>Envia datos al backend</button>
-
+            <div className="mensajeError">{mensaje}</div>
 
         </div>
 

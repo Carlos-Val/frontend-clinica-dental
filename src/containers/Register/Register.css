@@ -6,10 +6,16 @@
 }
 .formRegistro {
     width: 35em;
-    height: 30em;
-    background-color: blue;
+    height: 25em;
+    margin-top: 2em;
+    border: 0.1em solid black;
+    border-radius: 1em;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
    
 
+}
+
+.mensajeError{
+    color: red;
 }

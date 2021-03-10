@@ -1,26 +1,13 @@
 import React from 'react';
 import Footer from "../../components/Footer/Footer";
 import "./Home.css";
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-
+import clinica from"../../img/clinica.jpg";
 
 const Home = (props) => {
 
     return(
-        <div className= "vistaHome">Buenas gracias y muchas noches
-            <BrowserRouter>
-
-            <Switch>
-
-            </Switch>
-            
-            
-            <Footer/>
-            </BrowserRouter>
-            
-            
-        
-
+        <div className= "vistaHome">
+            <img src={clinica} alt=""/>
         </div>
     
         
