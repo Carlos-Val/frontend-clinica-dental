@@ -92,26 +92,11 @@ const Register = () =>{
                 <Input title="Contraseña" type="text" name="password" onChange={manejaEstado}/>
 
 
-
-
-
-            <p> Nombre : </p>
-            <input type="text" maxLength="30" placeholder="" name="nombre" onChange={manejaEstado}></input>
-            <p>Email : </p>
-            <input type="email" maxLength="30" placeholder="" name="email" onChange={manejaEstado}></input>
-            <p>Password : </p>
-            <input type="password" maxLength="12" placeholder="" name="password" onChange={manejaEstado}></input>
-            <p>Nombre : </p>
-            <input type="text" maxLength="12" placeholder="" name="password" onChange={manejaEstado}></input>
-            <p>Nombre : </p>
-            <input type="text" maxLength="12" placeholder="" name="password" onChange={manejaEstado}></input>
-
             </div>
 
             <button onClick={()=> enviaDatos()}>Envia datos al backend</button>
 
-            <Boton nombre='Home' destino=''/>
-            <div>{mensaje}</div>
+
         </div>
 
           
