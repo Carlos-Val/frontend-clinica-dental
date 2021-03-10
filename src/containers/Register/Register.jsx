@@ -5,6 +5,8 @@ import checkError from "../../utiles/utiles";
 
 import "./Register.css";
 
+
+
 const Register = () =>{
 
     //HOOKS
@@ -32,6 +34,7 @@ const Register = () =>{
     });
 
     useEffect(()=>{
+        
         return()=>{
 
         }
@@ -76,17 +79,38 @@ const Register = () =>{
 
     return(
         <div className="vistaRegister">
-            A tomar por cleta la biciculo
-            {/* <pre>{JSON.stringify(customer,null,2)}</pre> */}
+           A tomar por cleta la biciculo
+            <pre>{JSON.stringify(customer,null,2)}</pre>
             <div className="formRegistro">
+
+
+
+
+
+            <p> Nombre : </p>
+            <input type="text" maxLength="30" placeholder="" name="nombre" onChange={manejaEstado}></input>
+            <p>Email : </p>
+            <input type="email" maxLength="30" placeholder="" name="email" onChange={manejaEstado}></input>
+            <p>Password : </p>
+            <input type="password" maxLength="12" placeholder="" name="password" onChange={manejaEstado}></input>
+            <p>Nombre : </p>
+            <input type="text" maxLength="12" placeholder="" name="password" onChange={manejaEstado}></input>
+            <p>Nombre : </p>
+            <input type="text" maxLength="12" placeholder="" name="password" onChange={manejaEstado}></input>
 
             </div>
 
+            <button onClick={()=> enviaDatos()}>Envia datos al backend</button>
 
+            <Boton nombre='Home' destino=''/>
+            <div>{mensaje}</div>
         </div>
-    )
+
+          
+    );
 
     
 
 }
+
 export default Register;
