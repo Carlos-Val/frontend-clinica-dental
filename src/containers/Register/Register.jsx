@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import Boton from "../../components/Boton/Boton";
 import Input from "../../components/Input/Input";
+import axios from "axios";
 
 
 import checkError from "../../utiles/utiles";
@@ -72,8 +73,8 @@ const Register = () =>{
             email : customer.email,
             password : customer.password
         };
-
-        
+        let data = await axios.post("http://localhost:3001/customers/", body)
+        console.log("Soy lo que viene en data", data);
 
     };
 
@@ -82,7 +83,7 @@ const Register = () =>{
     return(
         <div className="vistaRegister">
             
-            {/* <pre>{JSON.stringify(customer,null,2)}</pre> */}
+            <pre>{JSON.stringify(customer,null,2)}</pre>
             <div className="formRegistro">
                 <Input title="Nombre" type="text" maxLength="30" name="nombre" onChange={manejaEstado} />
                 <Input title="Primer Apellido" type="text"  maxLength="30" name="apellido1" onChange={manejaEstado}/>
