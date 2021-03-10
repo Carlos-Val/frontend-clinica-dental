@@ -29,7 +29,7 @@ const Login = () =>{
     return(
         <div>
             <Input title="Email" type="text" name="email" onChange={manejaEstado}/>
-            <Input title="Contraseña" type="text" name="password" onChange={manejaEstado}/>
+            <Input title="Contraseña" type="password" name="password" onChange={manejaEstado}/>
             <button onClick={()=> logueame()}>Login</button>
         </div>
     )
