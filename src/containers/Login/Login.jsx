@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import Input from "../../components/Input/Input";
 import axios from "axios";
 import {useHistory} from 'react-router-dom';
+import checkError from "../../utiles/utiles";
 
 const Login = () =>{ 
 
@@ -11,30 +12,65 @@ const Login = () =>{
 
         email : "",
         password : ""
-    })
+    });
+
+    const [mensaje, setMensaje] = useState("");
+
+    //USEEFFECTS
+
+    useEffect(()=>{
+
+    },[]);
 
     //HANDLERS
 
     const manejaEstado = (ev)=>{
         setLogin({...dataLogin,[ev.target.name]: ev.target.type === "number" ? +ev.target.value : ev.target.value});
     }
+    
 
-    useEffect(()=>{
 
-    },[]);
 
     const logueame = async ()=>{
 
-        let result = await axios.post( "http://localhost:3001/customers/login", dataLogin)
-        console.log("soy el resultado", result)
-    }
+        //COMPROBACION DE ERRORES
+        setMensaje("");
+
+        let mensajeError = checkError(dataLogin);
+
+        setMensaje(mensajeError);
+
+        if(mensajeError){
+            return;
+        };
+        //LO QUE ENVIAMOS AL BACKEND
+
+        let body = {
+            email : dataLogin.email,
+            password : dataLogin.password
+        }
+
+
+        let result = await axios.post( "http://localhost:3001/customers/login", body);
+        console.log("8=======D",result);
+        if(!result.data.jwt?.error){
+            setTimeout(()=>{
+                history.push("/profile");
+            },1000);
+        }else{
+            setMensaje(result.data.jwt?.error);
+        }
+    };
 
     return(
         <div>
             <Input title="Email" type="text" name="email" onChange={manejaEstado}/>
             <Input title="Contraseña" type="password" name="password" onChange={manejaEstado}/>
             <button onClick={()=> logueame()}>Login</button>
+            <div className="mensajeError">{mensaje}</div>
         </div>
+
+        
     )
 } 
 
