@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from "react";
-import Boton from "../../components/Boton/Boton";
+
 import Input from "../../components/Input/Input";
 import axios from "axios";
-
+import {useHistory} from 'react-router-dom';
 
 import checkError from "../../utiles/utiles";
 
@@ -12,6 +12,7 @@ import "./Register.css";
 
 const Register = () =>{
 
+    let history = useHistory();
     //HOOKS
 
     const [customer, setUser] = useState({
@@ -73,8 +74,16 @@ const Register = () =>{
             email : customer.email,
             password : customer.password
         };
-        let data = await axios.post("http://localhost:3001/customers/", body)
-        console.log("Soy lo que viene en data", data);
+        let dataQueViene = await axios.post("http://localhost:3001/customers/", body)
+        
+
+        if(!dataQueViene.data.customer?.error){
+            setTimeout(()=>{
+                history.push("/login");
+            },1000);
+        }else{
+            setMensaje(dataQueViene.data.customer?.error);
+        }
 
     };
 
@@ -92,10 +101,10 @@ const Register = () =>{
                 <Input title="Teléfono" type="text"  maxLength="11" name="telefono" onChange={manejaEstado} />
                 <Input title="Email" type="text"  maxLength="30" name="email" onChange={manejaEstado}/>
                 <Input title="Contraseña" type="password"  maxLength="12" name="password" onChange={manejaEstado}/>
-
+                
 
             </div>
-            <button onClick={()=> enviaDatos()}>Envia datos al backend</button>
+            <button id="botonRegistrarse" onClick={()=> enviaDatos()}>Enviar</button>
             <div className="mensajeError">{mensaje}</div>
 
         </div>
