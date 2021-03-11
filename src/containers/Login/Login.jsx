@@ -1,8 +1,11 @@
 import React, {useState, useEffect} from "react";
 import Input from "../../components/Input/Input";
 import axios from "axios";
+import {useHistory} from 'react-router-dom';
 
 const Login = () =>{ 
+
+    let history = useHistory();
 
     const [dataLogin, setLogin] = useState({
 
