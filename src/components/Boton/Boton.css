@@ -5,6 +5,7 @@
     /*background-color:yellow;*/
     font-family: 'Cookie', cursive;
     font-size: x-large;
+    color: rgb(143,199,210);
     
     transition: 0.7s;
     /*margin-right: 0.5em;*/
@@ -15,7 +16,7 @@
 .megaBoton:hover{
     transition: 0.7s;
     background-color: transparent;
-    border-bottom: rgb(223, 12, 12) 4px solid;
+    border-bottom: rgb(152, 200, 243) 4px solid;
     
 
 }

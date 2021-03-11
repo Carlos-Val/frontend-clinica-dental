@@ -8,7 +8,7 @@
     width: 35em;
     height: 25em;
     margin-top: 2em;
-    border: 0.1em solid black;
+    border: 0.2em solid black;
     border-radius: 1em;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -16,11 +16,14 @@
 
 }
 #botonRegistrarse{
-    width: 5em;
-    height: 2em;
-    background-color: burlywood;
+    margin-top: 1em;;
+    width: 7em;
+    height: 2.5em;
+    background-color: rgb(143,199,210);
+    border-radius: 0.5em;
 }
 
 .mensajeError{
+    margin-top: 1em;
     color: red;
 }

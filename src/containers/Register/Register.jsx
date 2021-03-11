@@ -92,7 +92,7 @@ const Register = () =>{
     return(
         <div className="vistaRegister">
             
-            <pre>{JSON.stringify(customer,null,2)}</pre>
+            {/* <pre>{JSON.stringify(customer,null,2)}</pre> */}
             <div className="formRegistro">
                 <Input title="Nombre" type="text" maxLength="30" name="nombre" onChange={manejaEstado} />
                 <Input title="Primer Apellido" type="text"  maxLength="30" name="apellido1" onChange={manejaEstado}/>
