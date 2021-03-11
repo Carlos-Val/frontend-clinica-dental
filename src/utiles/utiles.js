@@ -73,7 +73,7 @@ const checkError = (datosCheck) => {
 
                 // eslint-disable-next-line
                 if(! /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/.test(datosCheck[field])){
-                    return "El password debe contener 8 caracteres, mayúsculas, minúsculas, número y algún caracter especial";
+                    return "El password debe contener al menos 8 caracteres, mayúsculas, minúsculas, número y algún caracter especial";
                 }
                 
             break;

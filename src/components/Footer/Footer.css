@@ -1,8 +1,14 @@
 .componenteFooter{
     height: 5em;
     width: 100%;
-    background-color: black;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    
+    
 }
 .logo{
-    margin-right: 55em;
+    
 }

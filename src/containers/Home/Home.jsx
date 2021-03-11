@@ -10,10 +10,15 @@ const Home = (props) => {
             <div className= "imagenDentista">
                {/* <img src={clinica} alt=""/> */}
             </div>
+
+        <Footer/>
         </div>
-    
+
         
+
         
+            
+       
     );
     
 
