@@ -52,13 +52,7 @@ const Login = () =>{
 
 
         let result = await axios.post( "http://localhost:3001/customers/login", body);
-<<<<<<< HEAD
-        console.log("8=======D",result);
-        localStorage.setItem('result', JSON.stringify(result.data))
-
-=======
         
->>>>>>> f4af4b456600d253ccc66d31b2d40116824891e1
         if(!result.data.jwt?.error){
             setTimeout(()=>{
                 history.push("/profile");
