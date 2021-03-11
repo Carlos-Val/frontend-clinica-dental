@@ -4,9 +4,26 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-end;
-    background-color: blueviolet;
+    /*background-color: blueviolet;*/
 }
 .logo{
-    margin-right: 55em;
+    width: 20%;
+    height: 9em;
+    display: flex;
+    
+
+}
+.espacioVacio{
+    width: 70%;
+    height: 5em;
+
+}
+.contenedorBotones{
+    width: 20%;
+    height: 5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
 }

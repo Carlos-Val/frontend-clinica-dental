@@ -7,9 +7,16 @@ const Profile = (props) => {
 
     return (
         <div className="vistaProfile">
-            A tomar por cleta la biciculo
+
+            <div className="prueba">Despues__________Antes</div>
+
+            <div className="imagenProfile"></div>
+            
+            
             
         </div>
+
+        
     )
 }
 
