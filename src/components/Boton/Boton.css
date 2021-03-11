@@ -1,16 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
 .megaBoton{
-    height: 2em;
+    height: 3em;
     width: 4em;
-    background-color: lightgoldenrodyellow;
-    border-radius: .3em;
-    transition: 0.5s;
-    margin-right: 0.5em;
+    /*background-color:yellow;*/
+    font-family: 'Cookie', cursive;
+    font-size: x-large;
+    
+    transition: 0.7s;
+    /*margin-right: 0.5em;*/
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .megaBoton:hover{
-    transition: 0.5s;
-    background-color: lightsalmon;
+    transition: 0.7s;
+    background-color: transparent;
+    border-bottom: rgb(223, 12, 12) 4px solid;
+    
 
 }
