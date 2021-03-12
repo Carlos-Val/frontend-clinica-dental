@@ -95,10 +95,16 @@ const Register = () =>{
 
     return(
         <div className="vistaRegister">
-            
+            <div className="textoEncabezado">
+                    <p>
+                        Estás a un sólo paso de tener una sonrisa perfecta. Regístrate y podrás gestionar tú mismo
+                         las citas que tengas. Cambiar la fecha, escoger tu dentista y cerrar una nueva cita nunca 
+                         ha sido tan fácil!
+                    </p>
+                </div>
             {/* <pre>{JSON.stringify(customer,null,2)}</pre> */}
             <div className="containerCompuesto">
-
+                
                 <div className="imagenSonrisa">
                     
                     <div className="sonrisas"><img src={chica1} alt=""></img></div>
