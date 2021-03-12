@@ -5,6 +5,10 @@ import axios from "axios";
 import {useHistory} from 'react-router-dom';
 
 import checkError from "../../utiles/utiles";
+import chico1 from "../../img/chico1.jpeg";
+import chico2 from "../../img/chico2.jpeg";
+import chica1 from "../../img/chica1.jpeg";
+import chica2 from "../../img/chica2.jpeg";
 
 import "./Register.css";
 
@@ -92,20 +96,40 @@ const Register = () =>{
     return(
         <div className="vistaRegister">
             
-            <pre>{JSON.stringify(customer,null,2)}</pre>
-            <div className="formRegistro">
-                <Input title="Nombre" type="text" maxLength="30" name="nombre" onChange={manejaEstado} />
-                <Input title="Primer Apellido" type="text"  maxLength="30" name="apellido1" onChange={manejaEstado}/>
-                <Input title="Segundo Apellido" type="text"  maxLength="30" name="apellido2" onChange={manejaEstado} />
-                <Input title="DNI" type="text"  maxLength="10" name="dni" onChange={manejaEstado}/>
-                <Input title="Teléfono" type="text"  maxLength="11" name="telefono" onChange={manejaEstado} />
-                <Input title="Email" type="text"  maxLength="30" name="email" onChange={manejaEstado}/>
-                <Input title="Contraseña" type="password"  maxLength="12" name="password" onChange={manejaEstado}/>
-                
+            {/* <pre>{JSON.stringify(customer,null,2)}</pre> */}
+            <div className="containerCompuesto">
 
+                <div className="imagenSonrisa">
+                    
+                    <div className="sonrisas"><img src={chica1} alt=""></img></div>
+                    <div className="sonrisas"><img src={chico1} alt=""></img></div>
+                    <div className="sonrisas"><img src={chica2} alt=""></img></div>
+                    <div className="sonrisas"><img src={chico2} alt=""></img></div>
+              
+                </div>
+
+                <div className="formRegistro">
+                    <Input title="Nombre" type="text" maxLength="30" name="nombre" onChange={manejaEstado} />
+                    <Input title="Primer Apellido" type="text"  maxLength="30" name="apellido1" onChange={manejaEstado}/>
+                    <Input title="Segundo Apellido" type="text"  maxLength="30" name="apellido2" onChange={manejaEstado} />
+                    <Input title="DNI" type="text"  maxLength="10" name="dni" onChange={manejaEstado}/>
+                    <Input title="Teléfono" type="text"  maxLength="11" name="telefono" onChange={manejaEstado} />
+                    <Input title="Email" type="text"  maxLength="30" name="email" onChange={manejaEstado}/>
+                    <Input title="Contraseña" type="password"  maxLength="12" name="password" onChange={manejaEstado}/>
+                </div>
+        
             </div>
-            <button id="botonRegistrarse" onClick={()=> enviaDatos()}>Enviar</button>
-            <div className="mensajeError">{mensaje}</div>
+            <div className="containerCompuesto2">
+                <div className="pieFotos"></div>
+                <div className="pieFormulario">
+                    <button id="botonRegistrarse" onClick={()=> enviaDatos()}>Enviar</button>
+                    <div className="mensajeError">{mensaje}</div>
+                </div>
+
+                
+            </div>
+            
+            
 
         </div>
 

@@ -4,23 +4,75 @@
     align-items: center;
     justify-content: center;
 }
+.containerCompuesto{
+    width: 100%;
+    height: 30em;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.imagenSonrisa{
+    width: 35em;
+    height: 25em;
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 1em;
+}
+.sonrisas{
+    width: 14em;
+    height: 12em;
+}
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 1em;
+  }
+
 .formRegistro {
     width: 35em;
     height: 25em;
-    margin-top: 2em;
+    margin-left: 1em;
     border: 0.1em solid black;
     border-radius: 1em;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-   
-
 }
+
+.containerCompuesto2{
+    width: 100%;
+    height: 7em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.pieFotos{
+    width: 35em;
+    height: 7em;
+}
+.pieFormulario{
+    width: 35em;
+    height: 7em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
 #botonRegistrarse{
-    width: 5em;
-    height: 2em;
-    background-color: burlywood;
+    margin-top: 1em;;
+    width: 7em;
+    height: 2.5em;
+    background-color: rgb(143,199,210);
+    border-radius: 0.5em;
 }
 
 .mensajeError{
+    margin-top: 1em;
     color: red;
 }
