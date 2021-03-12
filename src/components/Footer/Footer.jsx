@@ -10,18 +10,19 @@ import logoUbicacion from "../../img/ubicacion.jpg";
 const Footer = () => { 
     return(
         <div className="componenteFooter">
-
-            <div className="izquierda">
-                <img src={logoUbicacion} alt=""/>
+            <div className="prueba2">
+                <div className="izquierda">
+                    <p>dsffsdsf</p><img src={logoUbicacion} alt=""/>
+                </div>
             </div>
             <div className="centro"></div>
             
-            
-            <div className="derecha">
-            
-                <img src={logoInstagram} alt=""/>           
-                <img src={logoFacebook} alt=""/>           
-                <img src={logoTwitter} alt=""/>
+            <div className="prueba1">
+                <div className="derecha">            
+                    <img src={logoInstagram} alt=""/>           
+                    <img src={logoFacebook} alt=""/>           
+                    <img src={logoTwitter} alt=""/>
+                </div>
             </div>
            
            
