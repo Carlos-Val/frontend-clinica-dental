@@ -4,11 +4,19 @@
     
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    
-    
+    /*align-items: center;*/
+    justify-content: center;
+      
 }
-.logo{
+.izquierda{
+    width: 45%;
+}
+.centro{
+    width: 40%;
+}
+.derecha{
+    width: 15%;
+    margin-top: 2em;
     
+
 }

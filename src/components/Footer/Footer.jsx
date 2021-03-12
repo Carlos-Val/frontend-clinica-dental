@@ -1,14 +1,32 @@
 import React from 'react';
 import "./Footer.css";
-import logo from "../../img/logo.png";
 import logoFacebook from "../../img/facebook.png";
+import logoTwitter from "../../img/twitter.png";
+import logoInstagram from "../../img/instagram.png";
+import logoUbicacion from "../../img/ubicacion.jpg";
 
-const Footer = () =>{
+
+
+const Footer = () => { 
     return(
         <div className="componenteFooter">
+
+            <div className="izquierda">
+                <img src={logoUbicacion} alt=""/>
+            </div>
+            <div className="centro"></div>
             
-            <div className="logo"><img src={logo} alt=""/></div>
-            <span class="material-icons-outlined"><img src={logoFacebook} alt=""/></span>
+            
+            <div className="derecha">
+            
+                <img src={logoInstagram} alt=""/>           
+                <img src={logoFacebook} alt=""/>           
+                <img src={logoTwitter} alt=""/>
+            </div>
+           
+           
+      
+          
            
 
 
