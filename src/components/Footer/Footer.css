@@ -1,37 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 .componenteFooter{
     height: 5em;
     width: 100%;
     
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
+  
       
 }
-.prueba2{
-        
-}
 .izquierda{
-    width: 120%;
+    width: 25%;
+    height: 2.5em;
     display: flex;
+    flex-direction: row;
+    margin-left: 2em;
 }
+.ubicacion2{
+    margin-left: 0.5em;
+    margin-top: -1em;
+
+}
+p{
+    margin-bottom: -1em;
+    font-family: 'Cookie', cursive;
+    font-size: x-large;
+    
+}
+
+
 .centro{
-    width: 70%;
-
-}
-.prueba1{
-   width: 5em;
-   height: 5em;
-   margin-top: 2em; 
-   margin-left: 8em;
-    
-}
-.derecha{
+    width: 43%;
+    height: 5em;
     display: flex;
-    flex-direction: row;    
-    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     
-
-    
-
 }
+.contacto{
+    font-family: 'Pacifico', cursive;
+}
+.telefono{
+    display: flex;
+    flex-direction: row;
+    
+}
+.numeroTelefono{
+    margin-left: 1.5em;
+    font-family: 'Cookie', cursive;
+    font-size: x-large;
+}
+.email{
+    margin-left: 1em;
+    font-family: 'Cookie', cursive;
+    font-size: x-large;
+}
+
+.arroba{
+    display: flex;
+    flex-direction: row;
+}
+
+.derecha{
+    width: 25%;
+    height: 5em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 1em;
+    
+}
+.siguenos{
+    font-family: 'Pacifico', cursive;
+    margin-bottom: 0.5em;
+}
+.redesSociales{
+    display: flex;
+    flex-direction: row;
+    
+}
+    
+
+    
