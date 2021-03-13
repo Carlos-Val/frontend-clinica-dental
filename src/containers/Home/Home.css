@@ -3,6 +3,8 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
 }
 .imagenDentista{
@@ -13,4 +15,13 @@
     background:url(../../img/clinica1.png);
     background-size: cover;
 
+}
+.carruselPadre{
+
+    width: 20em;
+    height: 40em;
+}
+.recipienteFooter{
+    width: 100%;
+    height: 100%;
 }
