@@ -1,9 +1,7 @@
-import React, { Component } from 'react';
-import ReactDOM from "react-dom";
+import React from 'react';
 import Footer from "../../components/Footer/Footer";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import {Carousel} from "react-responsive-carousel";
 import "./Home.css";
+import DemoCarousel from "../../components/Carrusel/Carrusel";
 
 
 const Home = (props) => {
@@ -13,12 +11,10 @@ const Home = (props) => {
             <div className= "imagenDentista">
               
             </div>
-            
-             
+            <DemoCarousel/>
                        
 
             
-
 
             <Footer/>
         </div>
@@ -35,27 +31,6 @@ const Home = (props) => {
 
 }
 
-class DemoCarousel extends Component {
-    render() {
-        return (
-            <Carousel>
-                <div>
-                    <img src="../../img/carrusel1.jpg" />
-                    <p className="carrusel">Legend 1</p>
-                </div>
-                <div>
-                    <img src="../../img/carrusel2.jpg" />
-                    <p className="carrusel">Legend 2</p>
-                </div>
-                <div>
-                    <img src="../../img/carrusel3.jpg" />
-                    <p className="carrusel">Legend 3</p>
-                </div>
-            </Carousel>
-        );
-    }
-};
 
-ReactDOM.render(DemoCarousel, document.querySelector('.demo-carousel'));
 
 export default Home;
