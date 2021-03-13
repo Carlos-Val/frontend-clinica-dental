@@ -4,6 +4,7 @@ import axios from "axios";
 import {useHistory} from 'react-router-dom';
 import checkError from "../../utiles/utiles";
 
+
 const Login = () =>{ 
 
     let history = useHistory();
@@ -71,6 +72,8 @@ const Login = () =>{
             <Input title="Contraseña" type="password" name="password" onChange={manejaEstado}/>
             <button onClick={()=> logueame()}>Login</button>
             <div className="mensajeError">{mensaje}</div>
+
+            
         </div>
 
         

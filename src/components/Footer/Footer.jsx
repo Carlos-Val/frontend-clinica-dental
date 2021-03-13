@@ -31,7 +31,7 @@ const Footer = () => {
                         <div className="contacto">CONTACTO</div>
                         <div className="telefono">
                             <div className="telefono1"><img src={telefono} alt=""/></div>
-                            <div className="numeroTelefono">96368752</div>
+                            <div className="numeroTelefono">963687528</div>
                         </div>
                         <div className="arroba">   
                             <div className="arroba1"><img src={arroba} alt=""/></div>
