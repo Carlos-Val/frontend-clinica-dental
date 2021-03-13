@@ -18,10 +18,12 @@
 }
 .ubicacion2{
     margin-left: 0.5em;
-    margin-top: -1em;
+    
+    font-family: 'Cookie', cursive;
+    font-size: x-large;
 
 }
-p{
+.ubicacion3{
     margin-bottom: -1em;
     font-family: 'Cookie', cursive;
     font-size: x-large;

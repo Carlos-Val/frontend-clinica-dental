@@ -16,8 +16,10 @@ const Footer = () => {
             
                 <div className="izquierda">
                     <div className="ubicacion1"><img src={logoUbicacion} alt=""/></div>
-                    <div className="ubicacion2"><p>C/ Sonrisa de Ochando, nº 8 </p>
-                    <p>46038 Valencia</p><p>Tel. 963687548</p></div>
+                    <div className="direccion">
+                        <div className="ubicacion2">C/ Sonrisa de Ochando, nº 8</div>
+                        <div className="ubicacion3">46038 Valencia</div>
+                    </div>
                     
                     
 
