@@ -11,7 +11,7 @@ const Home = (props) => {
               
             </div>
 
-        <Footer/>
+            <Footer/>
         </div>
 
         
