@@ -11,8 +11,12 @@ const Home = (props) => {
             <div className= "imagenDentista">
               
             </div>
-            <div className="carruselPadre">
+            <div className="dinsTot">
+                <div className="texto1">Aqui ponemos texto</div>
+                <div className="carruselPadre">
                 <DemoCarousel/>
+                </div>
+                <div className="texto2">Aqui si queremos tambien</div>
             </div>
             <div className="recipienteFooter">
                 <Footer/>

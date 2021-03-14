@@ -10,16 +10,29 @@
 .imagenDentista{
     height: 27em;
     width: 100%;
-    /*background-size: 100% 100%;*/
     background-repeat:no-repeat;
     background:url(../../img/clinica1.png);
     background-size: cover;
 
 }
-.carruselPadre{
+.dinsTot{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.texto1{
+    width: 33%;
+    height: 29em;
 
-    width: 20em;
-    height: 40em;
+}
+.carruselPadre{
+    width: 33%;
+    height: 22em;
+}
+.texto2{
+    width: 33%;
+    height: 29em;
 }
 .recipienteFooter{
     width: 100%;
