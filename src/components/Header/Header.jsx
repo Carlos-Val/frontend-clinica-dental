@@ -13,7 +13,7 @@ const Header = () =>{
             <div className="contenedorBotones">
                 <Boton destino="" text="Home"/>
                 <Boton destino="login" text="Login"/>
-                <Boton destino="register" text="Register"/>
+                <Boton destino="register" text="Registro"/>
             </div>
 
 

@@ -6,5 +6,7 @@ img{
 .carrusel{
     width: 15em;
     height: 15em;
+    display: flex;
+    flex-direction: row;
 
 }
