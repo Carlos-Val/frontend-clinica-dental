@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@600&display=swap');
 .vistaRegister{
     display: flex;
     flex-direction: column;
@@ -9,6 +10,8 @@
     width: 65em;
     display: flex;
     align-items: flex-start;
+    font-family: 'Recursive', sans-serif;
+
 }
 .containerCompuesto{
     width: 100%;
@@ -47,6 +50,8 @@ img {
     border-radius: 1em;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    font-family: 'Recursive', sans-serif;
+    
 }
 
 .containerCompuesto2{
@@ -69,6 +74,7 @@ img {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    font-family: 'Recursive', sans-serif;
 }
 
 #botonRegistrarse{
@@ -77,9 +83,12 @@ img {
     height: 2.5em;
     background-color: rgb(143,199,210);
     border-radius: 0.5em;
+    font-family: 'Recursive', sans-serif;
+    
 }
 
 .mensajeError{
     margin-top: 1em;
     color: red;
+    font-family: 'Recursive', sans-serif;
 }
