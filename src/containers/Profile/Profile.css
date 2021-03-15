@@ -12,7 +12,5 @@
 .imagenProfile{
     height: 22em;
     width: 50%;
-    
-    background:url(../../img/imagen.jpg);
-   
+    background:url(../../img/imagen.jpg);  
 }
