@@ -22,12 +22,12 @@ img {
 }
 .espacioVacio{
     width: 70%;
-    height: 5em;
+    height: 6em;
 
 }
 .contenedorBotones{
     width: 20%;
-    height: 5em;
+    height: 6em;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

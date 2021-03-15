@@ -19,14 +19,9 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-<<<<<<< HEAD
-    margin-top: 2em;
-    margin-bottom: 2em;    
-=======
     margin-top: 4em;
     margin-bottom: 2em;
-    
->>>>>>> 039463de3bc27648e990314407f7ee5ec6687ff0
+    width: 100%;    
     height: 35em;
 }
 .texto1{
@@ -53,11 +48,7 @@
     align-items: center;
     justify-content: flex-start;
 }
-.imagenesCarrusel{
-    width: 15em;
-    height: 15em;
 
-}
 .texto2{
     width: 33%;
     height: 29em;
