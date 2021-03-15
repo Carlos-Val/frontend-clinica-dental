@@ -1,14 +1,17 @@
 .contenedorCarrusel{
-    width: 29em;
+    width: 23em;
     height: 29em;
-    margin-left: 3em;
+    
     
 }
 
 .carrusel{
-    width: 30em;
-    height: 25em;
+    width: 23em;
+    height: 23em;
     overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 
 }
 .carrusel img{
