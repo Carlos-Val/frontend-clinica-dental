@@ -96,6 +96,8 @@ const Register = () =>{
     return(
         <div className="vistaRegister">
             <div className="textoEncabezado">
+
+                    <h1>¡Regístrate, es gratis!</h1>
                     <p>
                         Estás a un sólo paso de tener una sonrisa perfecta. Regístrate y podrás gestionar tú mismo
                          las citas que tengas. Cambiar la fecha, escoger tu dentista y cerrar una nueva cita nunca 

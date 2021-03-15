@@ -1,17 +1,24 @@
 .componenteHeader{
-    height: 5em;
+    height: 6em;
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     
 }
-.logo{
-    width: 20%;
-    height: 9em;
+.contenedorLogo{
+    width: 10%;
+    height: 6em;
     display: flex;
-    
+    align-items: center;
+    justify-content: center;
+}
 
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    
 }
 .espacioVacio{
     width: 70%;
