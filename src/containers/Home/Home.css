@@ -20,8 +20,7 @@
     flex-direction: row;
     justify-content: center;
     margin-top: 2em;
-    margin-bottom: 2em;
-    
+    margin-bottom: 2em;    
     height: 35em;
 }
 .texto1{
@@ -35,7 +34,7 @@
 }
 .descripcionClinica{
     width: 75%;
-    line-height: 1.7em;
+    line-height: 1.55em;
     text-align: justify;
     
 }
@@ -54,7 +53,7 @@
 }
 .descripcionClinica2{
     width: 75%;
-    line-height: 1.7em;
+    line-height: 1.4em;
     text-align: justify;
     
 }
