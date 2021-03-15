@@ -8,11 +8,7 @@ const Profile = (props) => {
     return (
         <div className="vistaProfile">
 
-            <div className="prueba">Despues__________Antes</div>
-
-            <div className="imagenProfile"></div>
-
-            <div className="datosCustomer"></div>
+            
             
             
             
