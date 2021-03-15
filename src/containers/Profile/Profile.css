@@ -5,12 +5,44 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
-
-.imagenProfile{
-    height: 22em;
+.navBar{
     width: 50%;
-    background:url(../../img/imagen.jpg);  
+    height: 6em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: cadetblue;
 }
+
+.vistasNavBar{
+    width: 50%;
+    height: 40em;
+    display: flex;
+    background-color: lightblue;
+}
+.vistaPerfil{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.linkPerfil{
+    width: 6em;
+    height: 6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linkCitas{
+    width: 6em;
+    height: 6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
