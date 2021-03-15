@@ -8,7 +8,9 @@ const Header = () =>{
         <div className="componenteHeader">
 
             
-            <div className="logo"><img src={logo} alt=""/></div>
+            <div className="contenedorLogo">
+                <img src={logo} alt=""/>
+            </div>
             <div className="espacioVacio"></div>
             <div className="contenedorBotones">
                 <Boton destino="" text="Home"/>

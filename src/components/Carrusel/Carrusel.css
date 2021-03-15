@@ -1,12 +1,18 @@
-img{
+.contenedorCarrusel{
+    width: 29em;
+    height: 29em;
+    margin-left: 3em;
+    
+}
+
+.carrusel{
+    width: 30em;
+    height: 25em;
+    overflow: hidden;
+
+}
+.carrusel img{
     object-fit: cover;
     width: 100%;
     height: 100%;
-}
-.carrusel{
-    width: 15em;
-    height: 15em;
-    display: flex;
-    flex-direction: row;
-
 }

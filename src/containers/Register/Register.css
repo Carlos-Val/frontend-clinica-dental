@@ -9,7 +9,8 @@
     margin-top: 3em;
     width: 65em;
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     font-family: 'Recursive', sans-serif;
 
 }
@@ -34,12 +35,12 @@
     width: 14em;
     height: 12em;
 }
-img {
+.sonrisas img {
     object-fit: cover;
     width: 100%;
     height: 100%;
     border-radius: 1em;
-  }
+}
 
 .formRegistro {
     width: 35em;

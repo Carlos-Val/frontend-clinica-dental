@@ -1,7 +1,8 @@
 import React from 'react';
+import DemoCarousel from '../../components/Carrusel/Carrusel';
 import Footer from "../../components/Footer/Footer";
 import "./Home.css";
-import DemoCarousel from "../../components/Carrusel/Carrusel";
+
 
 
 const Home = (props) => {
@@ -24,7 +25,7 @@ Llámanos y concierta tu primera visita gratis, con revisión completa, radiogra
                 
                 </div>
                 <div className="carruselPadre">
-                <DemoCarousel/>
+                    <DemoCarousel/>
                 </div>
                 <div className="texto2">
                     <div className="descripcionClinica2">
