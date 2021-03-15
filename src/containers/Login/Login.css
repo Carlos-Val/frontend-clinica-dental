@@ -1,0 +1,9 @@
+.imagenCabecera{
+    height: 27em;
+    width: 100%;
+    /*background-size: 100% 100%;*/
+    background-repeat:no-repeat;
+    background:url(../../img/fotoRegister.jpeg);
+    background-size: cover;
+
+}

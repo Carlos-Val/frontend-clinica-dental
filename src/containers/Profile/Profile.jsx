@@ -11,6 +11,8 @@ const Profile = (props) => {
             <div className="prueba">Despues__________Antes</div>
 
             <div className="imagenProfile"></div>
+
+            <div className="datosCustomer"></div>
             
             
             

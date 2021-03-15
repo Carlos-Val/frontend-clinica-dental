@@ -3,6 +3,7 @@ import Input from "../../components/Input/Input";
 import axios from "axios";
 import {useHistory} from 'react-router-dom';
 import checkError from "../../utiles/utiles";
+import "./Login.css";
 
 const Login = () =>{ 
 
@@ -71,6 +72,7 @@ const Login = () =>{
             <Input title="Contraseña" type="password" name="password" onChange={manejaEstado}/>
             <button onClick={()=> logueame()}>Login</button>
             <div className="mensajeError">{mensaje}</div>
+            <div className="imagenCabecera"></div>
         </div>
 
         
