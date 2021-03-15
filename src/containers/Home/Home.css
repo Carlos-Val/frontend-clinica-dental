@@ -3,14 +3,62 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
 }
 .imagenDentista{
     height: 27em;
     width: 100%;
-    /*background-size: 100% 100%;*/
     background-repeat:no-repeat;
     background:url(../../img/clinica1.png);
     background-size: cover;
 
+}
+.dinsTot{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    
+    height: 35em;
+}
+.texto1{
+    width: 33%;
+    height: 29em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.descripcionClinica{
+    width: 75%;
+    line-height: 1.7em;
+    text-align: justify;
+    
+}
+
+.carruselPadre{
+    width: 33%;
+    height: 20em;
+}
+.texto2{
+    width: 33%;
+    height: 29em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.descripcionClinica2{
+    width: 75%;
+    line-height: 1.7em;
+    text-align: justify;
+    
+}
+.recipienteFooter{
+    width: 100%;
+    height: 100%;
 }

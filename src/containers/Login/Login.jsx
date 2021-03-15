@@ -3,7 +3,9 @@ import Input from "../../components/Input/Input";
 import axios from "axios";
 import {useHistory} from 'react-router-dom';
 import checkError from "../../utiles/utiles";
-import "./Login.css";
+import "./Login.css"
+import imagenPubli from "../../img/imagenPubli.jpeg"
+
 
 const Login = () =>{ 
 
@@ -53,7 +55,7 @@ const Login = () =>{
 
 
         let result = await axios.post( "http://localhost:3001/customers/login", body);
-        console.log("8=======D",result);
+        
         localStorage.setItem('result', JSON.stringify(result.data))
 
         
@@ -67,12 +69,22 @@ const Login = () =>{
     };
 
     return(
-        <div>
-            <Input title="Email" type="text" name="email" onChange={manejaEstado}/>
-            <Input title="Contraseña" type="password" name="password" onChange={manejaEstado}/>
-            <button onClick={()=> logueame()}>Login</button>
-            <div className="mensajeError">{mensaje}</div>
-            <div className="imagenCabecera"></div>
+        <div className="vistaLogin">
+            <div className="textoLogin">
+                <p> Accede a tu area personal y ten todas tus citas bajo control. </p>
+            </div>
+
+            <div className="formularioLogin">
+                <Input title="Email" type="text" name="email" onChange={manejaEstado}/>
+                <Input title="Contraseña" type="password" name="password" onChange={manejaEstado}/>
+                <button id="botonLogin" onClick={()=> logueame()}>Login</button>
+                <div className="mensajeError">{mensaje}</div>
+
+            </div>
+            <div className="publi">
+                <img src={imagenPubli} alt=""></img>
+            </div>
+            
         </div>
 
         
