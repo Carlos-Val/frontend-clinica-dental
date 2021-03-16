@@ -1,35 +1,31 @@
 import React from "react";
 import "./Profile.css";
+import {connect} from "react-redux";
 
 
 
 const Profile = (props) => {
 
-    let cambiaVista = (vistaPresente, vistaFutura) =>{
-        let vistaActual = vistaPresente;
-        let vistaDestino = vistaFutura;
+    
 
-        vistaActual.hidden= true;
-        vistaDestino.hidden= false;
-
-    }
+    
 
     return (
         <div className="vistaProfile">
 
             <div className="navBar">
-                <div className="linkPerfil" onClick={()=> cambiaVista('vistaPerfil', 'vistaCitas')}>
+                <div className="linkPerfil">
                     <p>Perfil</p>
                 </div>
-                <div className="linkCitas" onClick={()=> cambiaVista('vistaPerfil', 'vistaCitas')}>
+                <div className="linkCitas">
                     <p>Citas</p>
                 </div>
             </div>
             <div className="vistasNavBar">
-                <div className="vistaPerfil" hidden="false" >
+                <div className="vistaPerfil">
                     Soy el cliente
                 </div>
-                <div className="vistaCitas" hidden="true" >
+                <div className="vistaCitas">
                     Soy la cita del cliente
                 </div>
             </div>
@@ -43,5 +39,5 @@ const Profile = (props) => {
 
 
 
-export default Profile;
+export default connect()(Profile);
 
