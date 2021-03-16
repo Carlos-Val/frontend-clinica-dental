@@ -31,7 +31,7 @@ const Header = (props) =>{
                 <div className="espacioVacio"></div>
                 <div className="contenedorBotones">
                     <div className="saludoCliente">
-                        Bienvenid@ {props.customer.customer.nombre}
+                        Bienvenid@ {props.customer.customer?.nombre}
                     </div>
                     <div onClick={()=> logOut()} className="logout" destino="" >Logout</div>
                     <Boton destino="" text="Home"/>
