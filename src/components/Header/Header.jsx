@@ -1,12 +1,24 @@
 import React from 'react';
-
-import {connect} from 'react-redux';
-
+import {useHistory} from "react-router-dom";
+import { connect } from 'react-redux';
+import {LOGOUT} from "../../redux/types/customerTypes.js";
 import "./Header.css";
 import Boton from "../Boton/Boton";
 import logo from "../../img/logo.png";
 
+
+
 const Header = (props) =>{
+
+    let history = useHistory();
+
+    const logOut = () => {
+
+        props.dispatch({type: LOGOUT, payload: {}});
+
+        history.push("/");
+        
+    };
 
     if(props.customer.customer?.nombre){
         return(
@@ -21,6 +33,7 @@ const Header = (props) =>{
                     <div className="saludoCliente">
                         Bienvenid@ {props.customer.customer.nombre}
                     </div>
+                    <div onClick={()=> logOut()} className="logout" destino="" >Logout</div>
                     <Boton destino="" text="Home"/>
                     
                 </div>

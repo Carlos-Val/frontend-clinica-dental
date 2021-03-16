@@ -34,3 +34,10 @@
     align-items: center;
 
 }
+.logout{
+    width: 5em;
+    height: 3em;
+    background-color: coral;
+    color: black;
+
+}
