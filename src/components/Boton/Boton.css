@@ -1,22 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@600&display=swap');
 .megaBoton{
-    height: 3.9em;
-    width: 4em;
+    height: 4.8em;
+    width: 5em;
     /*background-color:yellow;*/
-    font-family: 'Cookie', cursive;
-    font-size: x-large;
+    font-family: 'Recursive', sans-serif;
+    
     color: rgb(143,199,210);
     
-    transition: 0.7s;
+    transition: 2s;
     /*margin-right: 0.5em;*/
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .megaBoton:hover{
-    transition: 0.7s;
-    background-color: transparent;
-    border-bottom: rgb(152, 200, 243) 4px solid;
+    transition: 2s;
+    /*background-color: transparent;*/
+    /*border-bottom: rgb(152, 200, 243) 4px solid;*/
+    color: white;
+    background-color: rgb(143,199,210);
     
 
 }
