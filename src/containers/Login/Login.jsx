@@ -3,11 +3,14 @@ import Input from "../../components/Input/Input";
 import axios from "axios";
 import {useHistory} from 'react-router-dom';
 import checkError from "../../utiles/utiles";
-import "./Login.css"
+import {connect} from 'react-redux';
+import {LOGIN} from '../../redux/types/customerTypes.js';
 import imagenPubli from "../../img/imagenPubli.jpeg"
 
+import "./Login.css"
 
-const Login = () =>{ 
+
+const Login = (props) =>{ 
 
     let history = useHistory();
 
@@ -56,7 +59,8 @@ const Login = () =>{
 
         let result = await axios.post( "http://localhost:3001/customers/login", body);
         
-        localStorage.setItem('result', JSON.stringify(result.data))
+        props.dispatch({ type: LOGIN, payload: result.data });
+
 
         
         if(!result.data.jwt?.error){
@@ -91,4 +95,4 @@ const Login = () =>{
     )
 } 
 
-export default Login;
+export default connect()(Login);
