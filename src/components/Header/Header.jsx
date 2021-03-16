@@ -28,8 +28,8 @@ const Header = (props) =>{
                 <div className="contenedorLogo">
                     <img src={logo} alt=""/>
                 </div>
-                <div className="espacioVacio"></div>
-                <div className="contenedorBotones">
+                <div className="espacioVacioLogout"></div>
+                <div className="contenedorBotonesLogout">
                     <div className="saludoCliente">
                         Bienvenid@ {props.customer.customer.nombre}
                     </div>

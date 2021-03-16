@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@600&display=swap');
 .componenteHeader{
-    height: 6em;
+    height: 5em;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -36,8 +37,39 @@
 }
 .logout{
     width: 5em;
-    height: 3em;
-    background-color: coral;
-    color: black;
+    height: 4.8em;
+    color: rgb(214, 26, 26);
+    font-family: 'Recursive', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 2s;
+
+}
+.logout:hover{
+    transition: 2s;
+    /*background-color: transparent;*/
+    /*border-bottom: rgb(152, 200, 243) 4px solid;*/
+    color: white;
+    background-color: rgb(214, 26, 26);
+    
+
+}
+.saludoCliente{
+    margin-right: 2em;
+    font-family: 'Recursive', sans-serif;
+}
+.espacioVacioLogout{
+    width: 50%;
+    height: 6em;
+
+}
+.contenedorBotonesLogout{
+    width: 40%;
+    height: 6em;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
 
 }

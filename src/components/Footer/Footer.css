@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@600&display=swap');
 .componenteFooter{
     height: 5em;
     width: 100%;
@@ -19,14 +19,12 @@
 .ubicacion2{
     margin-left: 0.5em;
     
-    font-family: 'Cookie', cursive;
-    font-size: x-large;
+    font-family: 'Recursive', sans-serif;
 
 }
 .ubicacion3{
     margin-bottom: -1em;
-    font-family: 'Cookie', cursive;
-    font-size: x-large;
+    font-family: 'Recursive', sans-serif;
     
 }
 
@@ -50,13 +48,11 @@
 }
 .numeroTelefono{
     margin-left: 1.5em;
-    font-family: 'Cookie', cursive;
-    font-size: x-large;
+    font-family: 'Recursive', sans-serif;
 }
 .email{
     margin-left: 1em;
-    font-family: 'Cookie', cursive;
-    font-size: x-large;
+    font-family: 'Recursive', sans-serif;
 }
 
 .arroba{
