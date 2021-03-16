@@ -8,7 +8,7 @@ import logo from "../../img/logo.png";
 
 const Header = (props) =>{
 
-    if(props.customer?.nombre){
+    if(props.customer.customer?.nombre){
         return(
             <div className="componenteHeader">
     
@@ -19,7 +19,7 @@ const Header = (props) =>{
                 <div className="espacioVacio"></div>
                 <div className="contenedorBotones">
                     <div className="saludoCliente">
-                        Bienvenid@ {props.customer.nombre}
+                        Bienvenid@ {props.customer.customer.nombre}
                     </div>
                     <Boton destino="" text="Home"/>
                     
