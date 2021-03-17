@@ -22,8 +22,6 @@ const Profile = (props) => {
         let result = await axios.get( `http://localhost:3001/customers/${props.customer.customer?.id}/appointments/`, { headers: {"Authorization" : `Bearer ${props.customer.token}`} });
         console.log(result.data)
         setAppointment({...appointmentId, appointment: result.data});
-        
-
     }
 
     useEffect(()=>{
