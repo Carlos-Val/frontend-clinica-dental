@@ -16,6 +16,7 @@ const customerReducer = (state = initialState, action) =>{
                 ...state,
                 customer : action.payload
             }
+       
         default:
             return state
     }

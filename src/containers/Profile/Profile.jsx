@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React,{useState, useEffect} from "react";
 import {connect} from 'react-redux';
 import "./Profile.css";
 import {useHistory} from 'react-router-dom';
@@ -11,9 +11,18 @@ const Profile = (props) => {
 
     let history = useHistory();
 
+    //Hook
+    const [appointmentId, setAppointment] = useState({
+        appointment: ''
+        
+    });
+    
+
     const traerCitas = async()=>{
-        let result = await axios.get( `http://localhost:3001/customers/${props.customer.customer.id}/appointments/`, { headers: {"Authorization" : `Bearer ${props.customer.token}`} });
+        let result = await axios.get( `http://localhost:3001/customers/${props.customer.customer?.id}/appointments/`, { headers: {"Authorization" : `Bearer ${props.customer.token}`} });
         console.log(result.data)
+        setAppointment({...appointmentId, appointment: result.data});
+        
 
     }
 
@@ -53,9 +62,16 @@ const Profile = (props) => {
                             Mis citas
                         </div>
                         <div className="contenidoCita">
-                            <p>
-                                Fecha de la cita : 
-                            </p>
+                            {appointmentId.appointment?.map(cita=>{
+                                return(
+                                    <div>
+                                        <p>
+                                        Fecha de la cita : {cita?.appointmentDate}
+                                        </p>
+                                    </div>
+                                )
+                            })}
+                            
     
                         </div>
     
