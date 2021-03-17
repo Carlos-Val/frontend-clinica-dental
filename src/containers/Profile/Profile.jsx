@@ -13,7 +13,7 @@ const Profile = (props) => {
 
     //Hook
     const [appointmentId, setAppointment] = useState({
-        appointment: ''
+        appointment: []
         
     });
     
@@ -60,11 +60,12 @@ const Profile = (props) => {
                             Mis citas
                         </div>
                         <div className="contenidoCita">
-                            {appointmentId.appointment?.map(cita=>{
+                            {appointmentId.appointment?.map(cita => {
                                 return(
-                                    <div>
+                                    <div key={cita.appointmentDate + "cita"}>
                                         <p>
-                                        Fecha de la cita : {cita?.appointmentDate}
+                                        Fecha de la cita : {cita?.appointmentDate}<br/>
+                                        Dentista : {cita?.dentistId}
                                         </p>
                                     </div>
                                 )
