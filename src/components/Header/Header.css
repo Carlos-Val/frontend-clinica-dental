@@ -48,8 +48,6 @@
 }
 .logout:hover{
     transition: 2s;
-    /*background-color: transparent;*/
-    /*border-bottom: rgb(152, 200, 243) 4px solid;*/
     color: white;
     background-color: rgb(214, 26, 26);
     
@@ -58,6 +56,20 @@
 .saludoCliente{
     margin-right: 2em;
     font-family: 'Recursive', sans-serif;
+    width:10em;
+    height: 6em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: rgb(143,199,210);
+    transition: 1.5s;
+}
+.saludoCliente:hover{
+    color: black;
+    transition: 1.5s;
+    transform: scale(1.2);
+
 }
 .espacioVacioLogout{
     width: 50%;
