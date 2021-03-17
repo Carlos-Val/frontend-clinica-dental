@@ -13,7 +13,7 @@ const Profile = (props) => {
 
     //Hook
     const [appointmentId, setAppointment] = useState({
-        appointment: ''
+        appointment: []
         
     });
     
@@ -29,7 +29,7 @@ const Profile = (props) => {
 
     },[])
     
-
+    
     if(props.customer?.token){
         return (
             <div className="vistaProfile">
@@ -60,26 +60,33 @@ const Profile = (props) => {
                             Mis citas
                         </div>
                         <div className="contenidoCita">
-                            {appointmentId.appointment?.map(cita=>{
-                                return(
+                            {
+                                appointmentId.appointment.length == 0
+                                ?
+                                <>
                                     <div>
-                                        <p>
-                                        Fecha de la cita : {cita?.appointmentDate}
-                                        </p>
+                                        No tienes citas pendientes
                                     </div>
-                                )
-                            })}
-                            
-    
+                                </>
+                                :
+                                <>
+                                    <div>
+                                        {appointmentId.appointment?.map(cita=>{
+                                            return(
+                                                <div>
+                                                    <p>
+                                                        Fecha de la cita : {cita.appointmentDate}
+                                                    </p>
+                                                </div>
+                                            )
+                                        })}
+                                    </div>
+                                </>
+                            }
                         </div>
-    
                     </div>
-    
                 </div>
-    
-           
             </div>
-       
         )
 
     }else{
