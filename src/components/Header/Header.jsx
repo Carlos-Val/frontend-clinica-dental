@@ -20,6 +20,10 @@ const Header = (props) =>{
         
     };
 
+    const click = () =>{
+        history.push("/profile");
+    };
+
     if(props.customer.customer?.nombre){
         return(
             <div className="componenteHeader">
@@ -30,7 +34,7 @@ const Header = (props) =>{
                 </div>
                 <div className="espacioVacioLogout"></div>
                 <div className="contenedorBotonesLogout">
-                    <div className="saludoCliente">
+                    <div onClick={()=>click()} className="saludoCliente">
                         Bienvenid@ {props.customer.customer?.nombre}
                     </div>
                     <div onClick={()=> logOut()} className="logout" destino="" >Logout</div>
