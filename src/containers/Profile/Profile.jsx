@@ -4,6 +4,7 @@ import "./Profile.css";
 import {useHistory} from 'react-router-dom';
 import axios from 'axios';
 import { SHOW } from "../../redux/types/appointmentsTypes";
+import Boton from "../../components/Boton/Boton";
 
 
 
@@ -12,12 +13,6 @@ import { SHOW } from "../../redux/types/appointmentsTypes";
 const Profile =  (props) => {
 
     let history = useHistory();
-
-    // //Hook
-    // const [appointmentId, setAppointment] = useState({
-    //     appointment: []
-        
-    // });
     
 
     const traerCitas = async()=>{
@@ -64,7 +59,7 @@ const Profile =  (props) => {
                         </div>
                         <div className="contenidoCita">
                             {
-                                props.appointment.length === 0
+                                props.appointment[0] === undefined
                                 ?
                                 <>
                                     <div>
@@ -73,11 +68,11 @@ const Profile =  (props) => {
                                 </>
                                 :
                                 <>
-                                    <div>
-                                        {props.appointment?.map(cita=>{
+                                    <div >
+                                        {props.appointment.map(cita=>{
                                             return(
-                                                <div>
-                                                    <p>
+                                                <div key={cita.id}>
+                                                    <p >
                                                         Fecha de la cita : {cita.appointmentDate}
                                                         Dentista: {cita.dentistId}
                                                         
@@ -90,6 +85,7 @@ const Profile =  (props) => {
                             }
                         </div>
                     </div>
+                    <Boton destino="appointments" text="Solicitar cita"/>
                 </div>
             </div>
         )
