@@ -4,6 +4,7 @@ import "./Profile.css";
 import {useHistory} from 'react-router-dom';
 import axios from 'axios';
 import { SHOW } from "../../redux/types/appointmentsTypes";
+import Boton from "../../components/Boton/Boton";
 
 
 
@@ -12,12 +13,15 @@ import { SHOW } from "../../redux/types/appointmentsTypes";
 const Profile =  (props) => {
 
     let history = useHistory();
+<<<<<<< HEAD
 
      ////Hook
      //const [appointmentId, setAppointment] = useState({
      //    appointment: []
      // 
      //});
+=======
+>>>>>>> 9f8fdb21433501038bf204d7bab86a99ced0e9a4
     
 
     const traerCitas = async()=>{
@@ -70,6 +74,7 @@ const Profile =  (props) => {
                         </div>
                         <div className="contenidoCita">
                             {
+<<<<<<< HEAD
                                props.appointment[0] === undefined
                                ?
                                <>
@@ -93,9 +98,35 @@ const Profile =  (props) => {
                                        })}
                                    </div>
                                </>
+=======
+                                props.appointment[0] === undefined
+                                ?
+                                <>
+                                    <div>
+                                        No tienes citas pendientes
+                                    </div>
+                                </>
+                                :
+                                <>
+                                    <div >
+                                        {props.appointment.map(cita=>{
+                                            return(
+                                                <div key={cita.id}>
+                                                    <p >
+                                                        Fecha de la cita : {cita.appointmentDate}
+                                                        Dentista: {cita.dentistId}
+                                                        
+                                                    </p>
+                                                </div>
+                                            )
+                                        })}
+                                    </div>
+                                </>
+>>>>>>> 9f8fdb21433501038bf204d7bab86a99ced0e9a4
                             }
                         </div>
                     </div>
+                    <Boton destino="appointments" text="Solicitar cita"/>
                 </div>
             </div>
         )
