@@ -1,53 +1,42 @@
-import React,{useState, useEffect} from "react";
+import React,{useEffect} from "react";
 import {connect} from 'react-redux';
 import "./Profile.css";
 import {useHistory} from 'react-router-dom';
 import axios from 'axios';
+import { SHOW } from "../../redux/types/appointmentsTypes";
 
 
 
 
-const Profile = (props) => {
+
+const Profile =  (props) => {
 
     let history = useHistory();
 
-    //Hook appointments
-    const [appointmentId, setAppointment] = useState({
-        appointment: []
-        
-    });
-    //Hook dentistas
-    const [dentistId, setDentist] = useState({
-        dentist: []
-    })
+     ////Hook
+     //const [appointmentId, setAppointment] = useState({
+     //    appointment: []
+     // 
+     //});
     
 
     const traerCitas = async()=>{
         let result = await axios.get( `http://localhost:3001/customers/${props.customer.customer?.id}/appointments/`, { headers: {"Authorization" : `Bearer ${props.customer.token}`} });
         console.log(result.data)
-        setAppointment({...appointmentId, appointment: result.data});
+        // setAppointment({...appointmentId, appointment: result.data});
+        props.dispatch({type: SHOW, payload: result.data});
     }
 
-    const traerDentistas = async()=>{
-        let consulta = await axios.get(`http://localhost:3001/dentists/`);
-        console.log(consulta.data);
-        setDentist({...dentistId, denstist: consulta.data});
-    }
+    
 
     useEffect(()=>{
         traerCitas();
-        traerDentistas();
-        obtenerDentista();    
+           
 
     },[]);
     
     
-    const obtenerDentista = () =>{
-        appointmentId.appointment.map(cita=>{
-            console.log("8==========D", cita.dentistId);
-            return cita.dentistId
-        })
-    }
+    
     
     
     if(props.customer?.token){
@@ -81,28 +70,29 @@ const Profile = (props) => {
                         </div>
                         <div className="contenidoCita">
                             {
-                                appointmentId.appointment.length == 0
-                                ?
-                                <>
-                                    <div>
-                                        No tienes citas pendientes
-                                    </div>
-                                </>
-                                :
-                                <>
-                                    <div>
-                                        {appointmentId.appointment?.map(cita=>{
-                                            return(
-                                                <div>
-                                                    <p>
-                                                        Fecha de la cita : {cita.appointmentDate}<br/>
-                                                        Dentista : {dentistaId.dentist.firstName}
-                                                    </p>
-                                                </div>
-                                            )
-                                        })}
-                                    </div>
-                                </>
+                               props.appointment[0] === undefined
+                               ?
+                               <>
+                                   <div>
+                                       No tienes citas pendientes
+                                   </div>
+                               </>
+                               :
+                               <>
+                                   <div>
+                                       {props.appointment?.map(cita=>{
+                                           return(
+                                               <div key={cita.id}>
+                                                   <p>
+                                                       Fecha de la cita : {cita.appointmentDate}
+                                                       Dentista: {cita.dentistId}
+                                                       
+                                                   </p>
+                                               </div>
+                                           )
+                                       })}
+                                   </div>
+                               </>
                             }
                         </div>
                     </div>
@@ -113,19 +103,23 @@ const Profile = (props) => {
     }else{
         setTimeout(()=>{
             history.push('/');
-        },2000);
+        },2500);
 
         return (
-            <div>Redirigiendo a home...</div>
-            
+            <div className="vuelveHome">
+                <div>Redirigiendo a home...</div>
+                <div><img src="../../img/spiner1.gif" alt="" className="spinner"/></div>
+            </div>     
         )
     }
     
 };
 
-const mapStateToProps = state =>{
+const mapStateToProps= state =>{
     return{
-        customer: state.customerReducer.customer
+        customer: state.customerReducer.customer,
+        appointment: state.appointmentsReducer.appointment
+        
     }
 };
 
