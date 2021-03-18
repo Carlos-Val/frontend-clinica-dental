@@ -13,15 +13,6 @@ import Boton from "../../components/Boton/Boton";
 const Profile =  (props) => {
 
     let history = useHistory();
-<<<<<<< HEAD
-
-     ////Hook
-     //const [appointmentId, setAppointment] = useState({
-     //    appointment: []
-     // 
-     //});
-=======
->>>>>>> 9f8fdb21433501038bf204d7bab86a99ced0e9a4
     
 
     const traerCitas = async()=>{
@@ -74,31 +65,6 @@ const Profile =  (props) => {
                         </div>
                         <div className="contenidoCita">
                             {
-<<<<<<< HEAD
-                               props.appointment[0] === undefined
-                               ?
-                               <>
-                                   <div>
-                                       No tienes citas pendientes
-                                   </div>
-                               </>
-                               :
-                               <>
-                                   <div>
-                                       {props.appointment?.map(cita=>{
-                                           return(
-                                               <div key={cita.id}>
-                                                   <p>
-                                                       Fecha de la cita : {cita.appointmentDate}
-                                                       Dentista: {cita.dentistId}
-                                                       
-                                                   </p>
-                                               </div>
-                                           )
-                                       })}
-                                   </div>
-                               </>
-=======
                                 props.appointment[0] === undefined
                                 ?
                                 <>
@@ -122,7 +88,6 @@ const Profile =  (props) => {
                                         })}
                                     </div>
                                 </>
->>>>>>> 9f8fdb21433501038bf204d7bab86a99ced0e9a4
                             }
                         </div>
                     </div>
