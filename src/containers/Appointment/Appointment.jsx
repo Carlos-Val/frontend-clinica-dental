@@ -1,8 +1,9 @@
-import React from "react";
+import React,{useState} from "react";
 import "./Appointment.css";
 import {connect} from 'react-redux';
 import {useHistory} from 'react-router-dom';
-import moment,{InputMoment} from 'moment';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 
 
@@ -10,20 +11,22 @@ const Appointment = (props) =>{
     
     let history = useHistory();
 
+    
+    const [startDate, setStartDate] = useState(new Date());
+
     if(props.customer?.token){
 
         return(
             <div className="containerAppointment">
                 <div>Estoy en appointments</div>
-                <InputMoment
-                    moment={this.state.moment}
-                    onChange={this.handleChange}
-                    onSave={this.handleSave}
-                    minStep={1} // default
-                    hourStep={1} // default
-                    prevMonthIcon="ion-ios-arrow-left" // default
-                    nextMonthIcon="ion-ios-arrow-right" // default
-                />
+                <input type="datetime-local" title="Fecha" name="date" onChange={manejaEstado}/>
+               
+                {/* <DatePicker
+                selected={startDate} 
+                onChange={date => setStartDate(date)}
+
+                /> */}
+
             </div>
 
         )
