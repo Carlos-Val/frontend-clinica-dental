@@ -15,8 +15,9 @@ const Appointment = (props) =>{
     
     const [appointment, setAppointment] = useState ({
 
-        date : "",
-        dentist : ""
+        appointmentDate : "",
+        dentistId : "",
+
     });
 
 
@@ -30,24 +31,25 @@ const Appointment = (props) =>{
         let body = {
 
         appointmentDate: appointment.appointmentDate,
-        customerId: appointment.customerId,
+        customerId: props.customer.customer.id,
         dentistId: appointment.dentistId
         }
 
         let backData = await axios.post(`http://localhost:3001/customers/${props.customer.customer?.id}/appointments/`, body, { headers: {"Authorization" : `Bearer ${props.customer.token}`} })
         console.log("8=======D",backData);
+        console.log("Este es el body", body);
     }
 
     
-    const [startDate, setStartDate] = useState(new Date());
 
     if(props.customer?.token){
 
         return(
             <div className="containerAppointment">
+                <pre>{JSON.stringify(appointment,null,2)}</pre>
                 <div>Estoy en appointments</div>
-                <input type="datetime-local" title="Fecha" name="date" onChange={manejaEstado}/>
-                <select name="dentist" title= "Elige tu dentista" onChange={manejaEstado}>
+                <input type="datetime-local" title="Fecha" name="appointmentDate" onChange={manejaEstado}/>
+                <select name="dentistId" title= "Elige tu dentista" onChange={manejaEstado}>
                     <option value=""></option>
                     <option value="1">Pepe Garcia</option>
                     <option value="2">Manolo Cabeza Bolo</option>
