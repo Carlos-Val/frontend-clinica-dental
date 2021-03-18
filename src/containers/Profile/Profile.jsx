@@ -11,11 +11,15 @@ const Profile = (props) => {
 
     let history = useHistory();
 
-    //Hook
+    //Hook appointments
     const [appointmentId, setAppointment] = useState({
         appointment: []
         
     });
+    //Hook dentistas
+    const [dentistId, setDentist] = useState({
+        dentist: []
+    })
     
 
     const traerCitas = async()=>{
@@ -24,10 +28,26 @@ const Profile = (props) => {
         setAppointment({...appointmentId, appointment: result.data});
     }
 
+    const traerDentistas = async()=>{
+        let consulta = await axios.get(`http://localhost:3001/dentists/`);
+        console.log(consulta.data);
+        setDentist({...dentistId, denstist: consulta.data});
+    }
+
     useEffect(()=>{
         traerCitas();
+        traerDentistas();
+        obtenerDentista();    
 
-    },[])
+    },[]);
+    
+    
+    const obtenerDentista = () =>{
+        appointmentId.appointment.map(cita=>{
+            console.log("8==========D", cita.dentistId);
+            return cita.dentistId
+        })
+    }
     
     
     if(props.customer?.token){
@@ -75,7 +95,8 @@ const Profile = (props) => {
                                             return(
                                                 <div>
                                                     <p>
-                                                        Fecha de la cita : {cita.appointmentDate}
+                                                        Fecha de la cita : {cita.appointmentDate}<br/>
+                                                        Dentista : {dentistaId.dentist.firstName}
                                                     </p>
                                                 </div>
                                             )
