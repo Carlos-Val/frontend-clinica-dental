@@ -19,7 +19,7 @@ const Register = () =>{
     let history = useHistory();
     //HOOKS
 
-    const [customer, setUser] = useState({
+    const [customer, setCustomer] = useState({
         nombre : "",
         apellido1 : "",
         apellido2 : "",
@@ -51,7 +51,7 @@ const Register = () =>{
     //HANDLERS
 
     const manejaEstado = (ev)=>{
-        setUser({...customer,[ev.target.name]: ev.target.type === "number" ? +ev.target.value : ev.target.value});
+        setCustomer({...customer,[ev.target.name]: ev.target.type === "number" ? +ev.target.value : ev.target.value});
     }
 
     //FUNCIONES

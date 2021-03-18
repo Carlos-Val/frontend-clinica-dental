@@ -21,10 +21,16 @@ const Profile =  (props) => {
         props.dispatch({type: SHOW, payload: result.data});
     }
 
+    
+
     useEffect(()=>{
         traerCitas();
+           
 
-    },[])
+    },[]);
+    
+    
+    
     
     
     if(props.customer?.token){

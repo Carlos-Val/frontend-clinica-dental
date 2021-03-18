@@ -1,15 +1,42 @@
-import React,{useState} from "react";
+import React, { useState} from "react";
 import "./Appointment.css";
 import {connect} from 'react-redux';
 import {useHistory} from 'react-router-dom';
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+import axios from "axios";
+
+
+import  "react-datepicker/dist/react-datepicker.css" ;
 
 
 
 const Appointment = (props) =>{
     
     let history = useHistory();
+    
+    const [appointment, setAppointment] = useState ({
+
+        date : "",
+        dentist : ""
+    });
+
+
+    const manejaEstado = (event)=>{
+        setAppointment({...appointment,[event.target.name]: event.target.type === "number" ? +event.target.value : event.target.value});
+    }
+
+    const enviaDatos = async ()=> {
+        
+        
+        let body = {
+
+        appointmentDate: appointment.appointmentDate,
+        customerId: appointment.customerId,
+        dentistId: appointment.dentistId
+        }
+
+        let backData = await axios.post(`http://localhost:3001/customers/${props.customer.customer?.id}/appointments/`, body, { headers: {"Authorization" : `Bearer ${props.customer.token}`} })
+        console.log("8=======D",backData);
+    }
 
     
     const [startDate, setStartDate] = useState(new Date());
@@ -20,13 +47,17 @@ const Appointment = (props) =>{
             <div className="containerAppointment">
                 <div>Estoy en appointments</div>
                 <input type="datetime-local" title="Fecha" name="date" onChange={manejaEstado}/>
-               
-                {/* <DatePicker
-                selected={startDate} 
-                onChange={date => setStartDate(date)}
-
-                /> */}
-
+                <select name="dentist" title= "Elige tu dentista" onChange={manejaEstado}>
+                    <option value=""></option>
+                    <option value="1">Pepe Garcia</option>
+                    <option value="2">Manolo Cabeza Bolo</option>
+                    <option value="3">Benito Camelas</option>
+                </select>
+                <button className='loginBtn' onClick={()=> enviaDatos()}>Send</button>
+                
+                
+                
+            
             </div>
 
         )
