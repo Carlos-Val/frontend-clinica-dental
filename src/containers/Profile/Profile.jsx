@@ -1,27 +1,30 @@
-import React,{useState, useEffect} from "react";
+import React,{useEffect} from "react";
 import {connect} from 'react-redux';
 import "./Profile.css";
 import {useHistory} from 'react-router-dom';
 import axios from 'axios';
+import { SHOW } from "../../redux/types/appointmentsTypes";
 
 
 
 
-const Profile = (props) => {
+
+const Profile =  (props) => {
 
     let history = useHistory();
 
-    //Hook
-    const [appointmentId, setAppointment] = useState({
-        appointment: []
+    // //Hook
+    // const [appointmentId, setAppointment] = useState({
+    //     appointment: []
         
-    });
+    // });
     
 
     const traerCitas = async()=>{
         let result = await axios.get( `http://localhost:3001/customers/${props.customer.customer?.id}/appointments/`, { headers: {"Authorization" : `Bearer ${props.customer.token}`} });
         console.log(result.data)
-        setAppointment({...appointmentId, appointment: result.data});
+        // setAppointment({...appointmentId, appointment: result.data});
+        props.dispatch({type: SHOW, payload: result.data});
     }
 
     useEffect(()=>{
@@ -61,7 +64,7 @@ const Profile = (props) => {
                         </div>
                         <div className="contenidoCita">
                             {
-                                appointmentId.appointment.length == 0
+                                props.appointment.length === 0
                                 ?
                                 <>
                                     <div>
@@ -71,11 +74,13 @@ const Profile = (props) => {
                                 :
                                 <>
                                     <div>
-                                        {appointmentId.appointment?.map(cita=>{
+                                        {props.appointment?.map(cita=>{
                                             return(
                                                 <div>
                                                     <p>
                                                         Fecha de la cita : {cita.appointmentDate}
+                                                        Dentista: {cita.dentistId}
+                                                        
                                                     </p>
                                                 </div>
                                             )
@@ -92,19 +97,23 @@ const Profile = (props) => {
     }else{
         setTimeout(()=>{
             history.push('/');
-        },2000);
+        },2500);
 
         return (
-            <div>Redirigiendo a home...</div>
-            
+            <div className="vuelveHome">
+                <div>Redirigiendo a home...</div>
+                <div><img src="../../img/spiner1.gif" alt="" className="spinner"/></div>
+            </div>     
         )
     }
     
 };
 
-const mapStateToProps = state =>{
+const mapStateToProps= state =>{
     return{
-        customer: state.customerReducer.customer
+        customer: state.customerReducer.customer,
+        appointment: state.appointmentsReducer.appointment
+        
     }
 };
 
