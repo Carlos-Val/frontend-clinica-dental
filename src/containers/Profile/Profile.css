@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@600&display=swap');
 .vistaProfile{
     width: 100%;
     height: 100%;
@@ -5,6 +6,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: 'Recursive', sans-serif;
 }
 .tarjetas{
     width: 100%;
@@ -24,13 +26,15 @@
     border: 0.2 solid black;
     
 }
+
 .linkPerfil{
     width: 20em;
     height: 15%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: rgb(143,199,210);
+    justify-content: center;   
+    border-radius: 0.7em;
+    border:rgb(143,199,210) 5px solid;
 }
 
 .vistaDatos{
@@ -39,7 +43,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(152, 200, 243);
+    margin-top: 0.5em;
+    border-radius: 0.7em;
+    border:rgb(152, 200, 243) 5px solid;
+    
 }
 
 .customerData{
@@ -62,7 +69,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(143,199,210);
+    border-radius: 0.7em;
+    border:rgb(143,199,210) 5px solid;
 }
 .contenidoCita{
     width: 20em;
@@ -70,7 +78,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(152, 200, 243);
+    margin-top: 0.5em;
+    border-radius: 0.7em;
+    border:rgb(152, 200, 243) 5px solid;
 
 }
 .vuelveHome{
@@ -85,5 +95,22 @@
     display: flex;
     width: 7em;
     height: 7em;
+}
+.avatar{
+    border-radius: 100%;
+
+}
+.citasPersonales{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18em;
+    margin-top: 0.15em;
+    margin-bottom: 0.15em;
+    height: 2.2em;
+    border-radius: 0.7em;
+    border:rgb(236, 85, 85) 5px solid;
+
+
 }
 

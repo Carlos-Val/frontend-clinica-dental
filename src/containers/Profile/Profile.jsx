@@ -5,6 +5,7 @@ import {useHistory} from 'react-router-dom';
 import axios from 'axios';
 import { SHOW } from "../../redux/types/appointmentsTypes";
 import Boton from "../../components/Boton/Boton";
+import Avatar from 'react-avatar';
 
 
 
@@ -37,21 +38,24 @@ const Profile =  (props) => {
         return (
             <div className="vistaProfile">
                 <div className="tarjetas">
+                    <Avatar className="avatar" name={props.customer.customer.nombre} size="100" textSizeRatio={1.50} />
                     <div className="tarjetaPerfil">
+                        
                         <div className="linkPerfil" >
-                            <p>Mi perfil</p>
+                            
+                            <p>Datos personales</p>
                         
                         </div>
                         <div className="vistaDatos"> 
                         
                             <div className="customerData">
                                 <p>
-                                Nombre: {props.customer.customer.nombre}<br/>
-                                Primer apellido: {props.customer.customer.apellido1}<br/>
-                                Segundo apellido: {props.customer.customer.apellido2}<br/>
-                                DNI: {props.customer.customer.dni}<br/>
-                                Teléfono: {props.customer.customer.telefono}<br/>
-                                email: {props.customer.customer.email}<br/>
+                                <div className="datosPersonales">Nombre: {props.customer.customer.nombre}<br/></div>    
+                                <div className="datosPersonales">Primer apellido: {props.customer.customer.apellido1}<br/></div>
+                                <div className="datosPersonales">Segundo apellido: {props.customer.customer.apellido2}<br/></div>
+                                <div className="datosPersonales">DNI: {props.customer.customer.dni}<br/></div>
+                                <div className="datosPersonales">Teléfono: {props.customer.customer.telefono}<br/></div>
+                                <div className="datosPersonales">email: {props.customer.customer.email}<br/></div>                             
                                 </p>
                             </div>
                         
@@ -76,7 +80,7 @@ const Profile =  (props) => {
                                     <div >
                                         {props.appointment.map(cita=>{
                                             return(
-                                                <div key={cita.id}>
+                                                <div className="citasPersonales" key={cita.id}>
                                                     <p >
                                                         Fecha de la cita : {cita.appointmentDate}
                                                         Dentista: {cita.dentistId}
