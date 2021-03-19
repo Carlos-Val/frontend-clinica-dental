@@ -49,14 +49,14 @@ const Profile =  (props) => {
                         <div className="vistaDatos"> 
                         
                             <div className="customerData">
-                                <p>
+                                
                                 <div className="datosPersonales">Nombre: {props.customer.customer.nombre}<br/></div>    
                                 <div className="datosPersonales">Primer apellido: {props.customer.customer.apellido1}<br/></div>
                                 <div className="datosPersonales">Segundo apellido: {props.customer.customer.apellido2}<br/></div>
                                 <div className="datosPersonales">DNI: {props.customer.customer.dni}<br/></div>
                                 <div className="datosPersonales">Teléfono: {props.customer.customer.telefono}<br/></div>
                                 <div className="datosPersonales">email: {props.customer.customer.email}<br/></div>                             
-                                </p>
+                               
                             </div>
                         
                         </div>
@@ -107,7 +107,7 @@ const Profile =  (props) => {
         return (
             <div className="vuelveHome">
                 <div>Redirigiendo a home...</div>
-                <div><img src="../../img/spiner1.gif" alt="" className="spinner"/></div>
+                <div><img src="../../img/spinnerv.gif" alt="" className="spinner"/></div>
             </div>     
         )
     }

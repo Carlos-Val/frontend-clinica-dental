@@ -3,6 +3,8 @@ import "./Appointment.css";
 import {connect} from 'react-redux';
 import {useHistory} from 'react-router-dom';
 import axios from "axios";
+import spinergif from "../../img/spiner.gif";
+
 
 
 import  "react-datepicker/dist/react-datepicker.css" ;
@@ -38,6 +40,22 @@ const Appointment = (props) =>{
         let backData = await axios.post(`http://localhost:3001/customers/${props.customer.customer?.id}/appointments/`, body, { headers: {"Authorization" : `Bearer ${props.customer.token}`} })
         console.log("8=======D",backData);
         console.log("Este es el body", body);
+
+        setTimeout(()=>{
+            history.push("/profile");
+            return(
+                <div>
+                    {
+                        <>
+                            <div>
+                                <img src={spinergif} alt="" className="spinner"/>
+                            </div>
+                        </>
+                    }
+                </div>
+            )
+            
+        },2500);
     }
 
     
@@ -47,25 +65,36 @@ const Appointment = (props) =>{
         return(
             <div className="containerAppointment">
                 <pre>{JSON.stringify(appointment,null,2)}</pre>
-                <div>Estoy en appointments</div>
-                <input type="datetime-local" title="Fecha" name="appointmentDate" onChange={manejaEstado}/>
-                <select name="dentistId" title= "Elige tu dentista" onChange={manejaEstado}>
-                    <option value=""></option>
-                    <option value="1">Pepe Garcia</option>
-                    <option value="2">Manolo Cabeza Bolo</option>
-                    <option value="3">Benito Camelas</option>
-                </select>
-                <button className='loginBtn' onClick={()=> enviaDatos()}>Send</button>
-                <div className="confirmAppointment">
-                    <div className="datosUsuario">
-                    {props.customer.customer.nombre} {props.customer.customer.apellido1} {props.customer.customer.apellido2} 
-                    Ha concertado una cita para {appointment.appointmentDate}</div>
+                <div className="seleccionFecha">
+                    Selecciona una fecha:
+                    <input className="date" type="datetime-local" title="Fecha" step="1800" min="09:00" max="19:00"  name="appointmentDate" onChange={manejaEstado}/>
+                </div>
+                <div className="seleccionDentista">
+                    Selecciona tu dentista:
+                    <select name="dentistId" title= "Elige tu dentista" onChange={manejaEstado}>
+                        <option value=""></option>
+                        <option value="1">Pepe Garcia</option>
+                        <option value="2">Manolo Cabeza Bolo</option>
+                        <option value="3">Benito Camelas</option>
+                    </select>
 
                 </div>
-                
-                
-                
-            
+                <div className="confirmAppointment">
+                    <div className="datosUsuario">
+                        <div className="nombre">
+                            {props.customer.customer.nombre} {props.customer.customer.apellido1} {props.customer.customer.apellido2}
+                        </div>
+                        <div>Ha concertado una cita para el</div> 
+                        <div className="muestraFecha">
+                            {appointment.appointmentDate}
+                        </div>
+                        <div>
+                            con el dentista {appointment.dentistId}
+                        </div>
+                    </div>
+
+                </div>
+                <button className='confirmaCita' onClick={()=> enviaDatos()}>Confirmar</button>
             </div>
 
         )
@@ -73,12 +102,12 @@ const Appointment = (props) =>{
     }else{
         setTimeout(()=>{
             history.push('/');
-        },2500);
+        },3000);
 
         return (
             <div className="vuelveHome">
                 <div>Redirigiendo a home...</div>
-                <div><img src="../../img/spiner1.gif" alt="" className="spinner"/></div>
+                <div><img src={spinergif} alt="" className="spinner"/></div>
             </div>     
         )
     }

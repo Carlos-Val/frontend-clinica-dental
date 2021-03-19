@@ -1,0 +1,51 @@
+.vuelveHome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.spinner{
+    width: 10em;
+    height: 10em;
+}
+.containerAppointment{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.seleccionFecha{
+    display: flex;
+    flex-direction: column;
+    width: 18em;
+    height: 5em;
+}
+.seleccionDentista{
+    display: flex;
+    flex-direction: column;
+    width: 18em;
+    height: 5em;
+}
+.confirmAppointment{
+    width: 18em;
+    height: 8em;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    
+
+}
+.confirmaCita{
+    width: 7em;
+    height: 2em;
+    background-color: lightblue;
+    border-radius: 0.2em;
+
+}
+.muestraFecha{
+    color: mediumblue;
+}

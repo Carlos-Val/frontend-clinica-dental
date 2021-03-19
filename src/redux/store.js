@@ -14,9 +14,9 @@ const store = createStoreWithMiddleware(
         },
         states: ["datosCustomer"]
     }),
-    /*window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__({
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__({
         trace: true,
-    })*/
+    })
 );
 
 export default store;
