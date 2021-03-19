@@ -39,6 +39,7 @@ const Appointment = (props) =>{
         console.log("8=======D",backData);
         console.log("Este es el body", body);
     }
+    
 
     
 
@@ -56,6 +57,7 @@ const Appointment = (props) =>{
                     <option value="3">Benito Camelas</option>
                 </select>
                 <button className='loginBtn' onClick={()=> enviaDatos()}>Send</button>
+                
                 <div className="confirmAppointment">
                     <div className="datosUsuario">
                     {props.customer.customer.nombre} {props.customer.customer.apellido1} {props.customer.customer.apellido2} 

@@ -5,7 +5,7 @@ import {useHistory} from 'react-router-dom';
 import axios from 'axios';
 import { SHOW } from "../../redux/types/appointmentsTypes";
 import Boton from "../../components/Boton/Boton";
-import Avatar from 'react-avatar';
+import Avatar, {ConfigProvider} from 'react-avatar';
 
 
 
@@ -14,6 +14,10 @@ import Avatar from 'react-avatar';
 const Profile =  (props) => {
 
     let history = useHistory();
+
+    const goAppointment = () =>{
+        history.push("/appointments");
+    }
     
 
     const traerCitas = async()=>{
@@ -38,63 +42,69 @@ const Profile =  (props) => {
         return (
             <div className="vistaProfile">
                 <div className="tarjetas">
-                    <Avatar className="avatar" name={props.customer.customer.nombre} size="100" textSizeRatio={1.50} />
-                    <div className="tarjetaPerfil">
+                <ConfigProvider colors={[]}>
+                        <Avatar className="avatar" name={props.customer.customer.nombre} size="100" textSizeRatio={1.50} />
+                </ConfigProvider>
+                    <div className="avatarDatos">
                         
-                        <div className="linkPerfil" >
-                            
-                            <p>Datos personales</p>
-                        
-                        </div>
-                        <div className="vistaDatos"> 
-                        
-                            <div className="customerData">
-                                <p>
-                                <div className="datosPersonales">Nombre: {props.customer.customer.nombre}<br/></div>    
-                                <div className="datosPersonales">Primer apellido: {props.customer.customer.apellido1}<br/></div>
-                                <div className="datosPersonales">Segundo apellido: {props.customer.customer.apellido2}<br/></div>
-                                <div className="datosPersonales">DNI: {props.customer.customer.dni}<br/></div>
-                                <div className="datosPersonales">Teléfono: {props.customer.customer.telefono}<br/></div>
-                                <div className="datosPersonales">email: {props.customer.customer.email}<br/></div>                             
-                                </p>
+                        <div className="tarjetaPerfil">
+
+                            <div className="linkPerfil" >
+
+                                <p>Datos personales</p>
+
                             </div>
-                        
+                            <div className="vistaDatos"> 
+
+                                <div className="customerData">
+                                    <p>
+                                    <div className="datosPersonales">Nombre: {props.customer.customer.nombre}<br/></div>    
+                                    <div className="datosPersonales">Primer apellido: {props.customer.customer.apellido1}<br/></div>
+                                    <div className="datosPersonales">Segundo apellido: {props.customer.customer.apellido2}<br/></div>
+                                    <div className="datosPersonales">DNI: {props.customer.customer.dni}<br/></div>
+                                    <div className="datosPersonales">Teléfono: {props.customer.customer.telefono}<br/></div>
+                                    <div className="datosPersonales">email: {props.customer.customer.email}<br/></div>                             
+                                    </p>
+                                </div>
+
+                            </div>
+
                         </div>
                     
-                    </div>
-                    <div className="tarjetaCitas">
-                        <div className="tituloCita">
-                            Mis citas
+                        <div className="tarjetaCitas">
+                            <div className="tituloCita">
+                                Mis citas
+                            </div>
+                            <div className="contenidoCita">
+                                {
+                                    props.appointment[0] === undefined
+                                    ?
+                                    <>
+                                        <div>
+                                            No tienes citas pendientes
+                                        </div>
+                                    </>
+                                    :
+                                    <>
+                                        <div >
+                                            {props.appointment.map(cita=>{
+                                                return(
+                                                    <div className="citasPersonales" key={cita.id}>
+                                                        <p >
+                                                            Fecha de la cita : {cita.appointmentDate}
+                                                            Dentista: {cita.dentistId}
+
+                                                        </p>
+                                                    </div>
+                                                )
+                                            })}
+                                        </div>
+                                    </>
+                                }
+                            </div>
                         </div>
-                        <div className="contenidoCita">
-                            {
-                                props.appointment[0] === undefined
-                                ?
-                                <>
-                                    <div>
-                                        No tienes citas pendientes
-                                    </div>
-                                </>
-                                :
-                                <>
-                                    <div >
-                                        {props.appointment.map(cita=>{
-                                            return(
-                                                <div className="citasPersonales" key={cita.id}>
-                                                    <p >
-                                                        Fecha de la cita : {cita.appointmentDate}
-                                                        Dentista: {cita.dentistId}
-                                                        
-                                                    </p>
-                                                </div>
-                                            )
-                                        })}
-                                    </div>
-                                </>
-                            }
-                        </div>
                     </div>
-                    <Boton destino="appointments" text="Solicitar cita"/>
+                    <button className="botonGoAppointment" onClick={()=> goAppointment()}>Solicitar Cita</button>
                 </div>
             </div>
         )
