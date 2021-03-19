@@ -57,6 +57,7 @@ const Appointment = (props) =>{
             
         },2500);
     }
+    
 
     
 
