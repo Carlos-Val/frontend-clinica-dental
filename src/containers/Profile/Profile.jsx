@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import "./Profile.css";
 import {useHistory} from 'react-router-dom';
 import axios from 'axios';
-import { SHOW } from "../../redux/types/appointmentsTypes";
+import { DESTROY, SHOW } from "../../redux/types/appointmentsTypes";
 
 import Avatar, {ConfigProvider} from 'react-avatar';
 
@@ -22,11 +22,15 @@ const Profile =  (props) => {
 
     const traerCitas = async()=>{
         let result = await axios.get( `http://localhost:3001/customers/${props.customer.customer?.id}/appointments/`, { headers: {"Authorization" : `Bearer ${props.customer.token}`} });
-        console.log(result.data)
+        console.log("traer citas que tengo",result.data)
         props.dispatch({type: SHOW, payload: result.data});
     }
 
-    
+    const deleteAppointment = async(cita) =>{
+        let elimina = await axios.delete( `http://localhost:3001/customers/${props.customer.customer?.id}/appointments/${cita.id}/`, { headers: {"Authorization" : `Bearer ${props.customer.token}`} });
+        console.log("esta es la cita a eliminar",elimina);
+        props.dispatch({type: DESTROY, payload: elimina.data});
+    }    
 
     useEffect(()=>{
         traerCitas();
@@ -57,14 +61,14 @@ const Profile =  (props) => {
                             <div className="vistaDatos"> 
 
                                 <div className="customerData">
-                                    <p>
+                                    <div>
                                     <div className="datosPersonales">Nombre: {props.customer.customer.nombre}<br/></div>    
                                     <div className="datosPersonales">Primer apellido: {props.customer.customer.apellido1}<br/></div>
                                     <div className="datosPersonales">Segundo apellido: {props.customer.customer.apellido2}<br/></div>
                                     <div className="datosPersonales">DNI: {props.customer.customer.dni}<br/></div>
                                     <div className="datosPersonales">Teléfono: {props.customer.customer.telefono}<br/></div>
                                     <div className="datosPersonales">email: {props.customer.customer.email}<br/></div>                             
-                                    </p>
+                                    </div>
                                 </div>
 
                             </div>
@@ -90,11 +94,12 @@ const Profile =  (props) => {
                                             {props.appointment.map(cita=>{
                                                 return(
                                                     <div className="citasPersonales" key={cita.id}>
-                                                        <p >
+                                                        <div>
                                                             Fecha de la cita : {cita.appointmentDate}
                                                             Dentista: {cita.dentistId}
+                                                            <button className="cancelarCita" onClick={()=>deleteAppointment(cita)}>Cancelar cita</button>
 
-                                                        </p>
+                                                        </div>
                                                     </div>
                                                 )
                                             })}

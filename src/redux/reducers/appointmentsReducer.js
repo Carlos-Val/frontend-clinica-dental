@@ -1,7 +1,7 @@
 import {SHOW, CREATE, UPDATE, DESTROY} from '../types/appointmentsTypes.js';
 
 const initialState = {
-    appointment: {}
+    appointment: []
 };
 
 const appointmentsReducer = (state = initialState, action) =>{
