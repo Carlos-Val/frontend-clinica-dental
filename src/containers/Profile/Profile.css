@@ -122,9 +122,9 @@
     width: 18em;
     margin-top: 0.15em;
     margin-bottom: 0.15em;
-    height: 2.2em;
-    border-radius: 0.7em;    
-    color:rgb(228, 39, 39);
+    height: 4em;
+    border-radius: 0.7em;
+    border:rgb(236, 85, 85) 2px solid;
 }
 
 .botonGoAppointment{
