@@ -8,6 +8,7 @@ import spinergif from "../../img/spiner.gif";
 
 
 import  "react-datepicker/dist/react-datepicker.css" ;
+import prueba1 from "../../img/imagen.jpg";
 
 
 
@@ -22,7 +23,20 @@ const Appointment = (props) =>{
 
     });
 
+    const mapDentist = (id) => {
+        switch (id) {
+            case 0:
+                return 'Seleccione su dentista'
+            case 1:
+                return 'Dr. Pepe García';
+            case 2:
+                return 'Dr. Manolo Cabezabolo';
+            case 3:
+                return 'Dr. Benito Camela';
 
+        }
+    }  
+    
     const manejaEstado = (event)=>{
         setAppointment({...appointment,[event.target.name]: event.target.type === "number" ? +event.target.value : event.target.value});
     }
@@ -38,8 +52,7 @@ const Appointment = (props) =>{
         }
 
         let backData = await axios.post(`http://localhost:3001/customers/${props.customer.customer?.id}/appointments/`, body, { headers: {"Authorization" : `Bearer ${props.customer.token}`} })
-        console.log("8=======D",backData);
-        console.log("Este es el body", body);
+        
 
         setTimeout(()=>{
             history.push("/profile");
@@ -57,42 +70,43 @@ const Appointment = (props) =>{
             
         },2500);
     }
-    
 
-    
-
+   
     if(props.customer?.token){
 
         return(
             <div className="containerAppointment">
                 <pre>{JSON.stringify(appointment,null,2)}</pre>
+                <div className="nombre">
+                            Hola, {props.customer.customer.nombre} {props.customer.customer.apellido1} {props.customer.customer.apellido2}
+                </div>
                 <div className="seleccionFecha">
-                    Selecciona una fecha:
+                    Seleccione una fecha para su cita:
                     <input className="date" type="datetime-local" title="Fecha" step="1800" min="09:00" max="19:00"  name="appointmentDate" onChange={manejaEstado}/>
                 </div>
+
+                <div>Esta concertando una cita para el día</div> 
+                        <div className="muestraFecha">
+                            {appointment.appointmentDate} 
+                        </div>
+                <div>Elija un dentista</div> 
+
+
                 <div className="seleccionDentista">
-                    Selecciona tu dentista:
+                    
                     <select name="dentistId" title= "Elige tu dentista" onChange={manejaEstado}>
-                        <option value=""></option>
-                        <option value="1">Pepe Garcia</option>
-                        <option value="2">Manolo Cabeza Bolo</option>
-                        <option value="3">Benito Camelas</option>
+                        
+                        <option value="0">{mapDentist(0)}</option>
+                        <option value="1">{mapDentist(1)}</option>
+                        <option value="2">{mapDentist(2)}</option>
+                        <option value="3">{mapDentist(3)}</option>
+                        
+                        
                     </select>
+                    
 
                 </div>
-                <div className="confirmAppointment">
-                    <div className="datosUsuario">
-                        <div className="nombre">
-                            {props.customer.customer.nombre} {props.customer.customer.apellido1} {props.customer.customer.apellido2}
-                        </div>
-                        <div>Ha concertado una cita para el</div> 
-                        <div className="muestraFecha">
-                            {appointment.appointmentDate}
-                        </div>
-                        <div>
-                            con el dentista {appointment.dentistId}
-                        </div>
-                    </div>
+                <div className="confirmAppointment">Y, por ultimo, confirme la cita!!                  
 
                 </div>
                 <button className='confirmaCita' onClick={()=> enviaDatos()}>Confirmar</button>
@@ -103,7 +117,7 @@ const Appointment = (props) =>{
     }else{
         setTimeout(()=>{
             history.push('/');
-        },3000);
+        },1000);
 
         return (
             <div className="vuelveHome">

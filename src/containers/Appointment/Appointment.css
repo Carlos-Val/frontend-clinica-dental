@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@600&display=swap');
 .vuelveHome{
     display: flex;
     flex-direction: column;
@@ -16,6 +17,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: 'Recursive', sans-serif;
 
 }
 .seleccionFecha{
@@ -40,12 +42,14 @@
 
 }
 .confirmaCita{
-    width: 7em;
+    width: 8em;
     height: 2em;
     background-color: lightblue;
-    border-radius: 0.2em;
+    border-radius: 0.5em;
+    font-family: 'Recursive', sans-serif;
 
 }
 .muestraFecha{
     color: mediumblue;
 }
+
