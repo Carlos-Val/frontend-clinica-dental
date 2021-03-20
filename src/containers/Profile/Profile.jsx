@@ -4,7 +4,7 @@ import "./Profile.css";
 import {useHistory} from 'react-router-dom';
 import axios from 'axios';
 import { SHOW } from "../../redux/types/appointmentsTypes";
-import Boton from "../../components/Boton/Boton";
+
 import Avatar, {ConfigProvider} from 'react-avatar';
 
 
