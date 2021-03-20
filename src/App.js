@@ -6,6 +6,7 @@ import Login from './containers/Login/Login';
 import Profile from './containers/Profile/Profile';
 import Register from './containers/Register/Register';
 import Appointment from "./containers/Appointment/Appointment";
+import Admin from "./containers/Admin/Admin";
 
 
 
@@ -26,6 +27,7 @@ function App() {
           <Route path = "/login" exact component = {Login}/>
           <Route path = "/profile" exact component = {Profile}/>
           <Route path = "/appointments" exact component = {Appointment}/>
+          <Route path = "/admin" exact component = {Admin}/>
           
       
           

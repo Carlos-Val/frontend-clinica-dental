@@ -71,6 +71,36 @@ const Login = (props) =>{
             setMensaje(result.data.jwt?.error);
         }
     };
+    const loginAdmin = async ()=>{
+        //COMPROBACION DE ERRORES
+        setMensaje("");
+
+        let mensajeErrorAdmin = checkError(dataLogin);
+
+        setMensaje(mensajeErrorAdmin);
+
+        if(mensajeErrorAdmin){
+            return;
+        };
+        //Datos al backend
+        let body = {
+            email : dataLogin.email,
+            password : dataLogin.password
+        }
+
+
+        let result = await axios.post( "http://localhost:3001/clinic/", body);
+        console.log(result.data);
+
+        if(!result.data.error){
+            setTimeout(()=>{
+                history.push("/admin");
+            },1000);
+        }else{
+            setMensaje(result.data.error);
+        }
+        
+    }
 
     return(
         <div className="vistaLogin">
@@ -87,6 +117,21 @@ const Login = (props) =>{
             </div>
             <div className="publi">
                 <img src={imagenPubli} alt=""></img>
+            </div>
+            <div className="loginAdmin">
+                <p>Si eres administrador accede desde aquí.</p>
+            </div>
+            <div className="formularioAdmin">
+                <div className="inputsAdmin">
+                    <Input type="text" name="email" placeholder="email" onChange={manejaEstado} />
+                    <Input type="password" name="password" placeholder="password" onChange={manejaEstado} />
+                </div>
+                <div className="botonAdmin">
+                    <button id="botonLogin" onClick={()=> loginAdmin()}>Accede</button>
+                </div>
+                <div className="mensajeError">{mensaje}</div>
+                
+                
             </div>
             
         </div>

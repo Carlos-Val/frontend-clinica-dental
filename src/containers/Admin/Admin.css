@@ -1,0 +1,30 @@
+.vistaAdmin{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.tablaClientes{
+    width: 100%;
+    height: 20em;
+    display: flex;
+}
+.cabeceraDatos{
+    width: 100%;
+    height: 3em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.listadoClientes{
+    width: 100%;
+    height: 3em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
