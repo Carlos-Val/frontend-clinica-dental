@@ -41,20 +41,37 @@ const Home = () => {
                     <>
                         <div>
                             <div className="cabeceraDatos">
-                                <div className="nombre">
+                                <div className="nombreListado1">
                                     Nombre
                                 </div>
-                                <div className="apellido1">
+                                <div className="apellido1Listado1">
                                     Primer Apellido
                                 </div>
+                                <div className="apellido2Listado1">
+                                    Segundo Apellido
+                                </div>
+                                <div className="dniListado1">
+                                    DNI
+                                </div>
+                                <div className="telefonoListado1">
+                                    Telefono
+                                </div>
+                                <div className="emailListado1">
+                                    Email
+                                </div>
+
                             </div>
                             
                             {users.list.map(user=>{
                                 return(
                                     <div className="listadoClientes" key={user.id}>
                                         
-                                        <div className="nombre">{user.nombre}</div>
-                                        <div className="apellido1">{user.apellido1}</div>
+                                        <div className="nombreListado">{user.nombre}</div>
+                                        <div className="apellido1Listado">{user.apellido1}</div>
+                                        <div className="apellido2Listado">{user.apellido2}</div>
+                                        <div className="dniListado">{user.dni}</div>
+                                        <div className="telefonoListado">{user.telefono}</div>
+                                        <div className="emailListado">{user.email}</div>
 
 
                                     </div>

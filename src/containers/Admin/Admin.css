@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@600&display=swap');
 .vistaAdmin{
     width: 100%;
     height: 100%;
@@ -13,18 +14,120 @@
 }
 .cabeceraDatos{
     width: 100%;
-    height: 3em;
+    height: 2.3em;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    color: rgb(8, 42, 236);
+    font-family: 'Recursive', sans-serif;
+    background-color: rgb(152, 200, 243);
 
 }
 .listadoClientes{
     width: 100%;
-    height: 3em;
+    height: 2.7em;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    font-family: 'Recursive', sans-serif;
+    
+
+}
+.nombreListado1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10em;
+    height: 2em;
+    border:black 2px solid;
+    
+}
+.apellido1Listado1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10em;
+    height: 2em;
+    border:black 2px solid; 
+}
+.apellido2Listado1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10em;
+    height: 2em;
+    border:black 2px solid; 
+}
+.dniListado1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7em;
+    height: 2em;
+    border:black 2px solid; 
+}
+.telefonoListado1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7em;
+    height: 2em;
+    border:black 2px solid; 
+}
+.emailListado1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15em;
+    height: 2em;
+    border:black 2px solid; 
+}
+.nombreListado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10em;
+    height: 2em;
+    border:black 2px solid;
+}
+.apellido1Listado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10em;
+    height: 2em;
+    border:black 2px solid; 
+}
+.apellido2Listado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10em;
+    height: 2em;
+    border:black 2px solid; 
+}
+.dniListado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7em;
+    height: 2em;
+    border:black 2px solid; 
+}
+.telefonoListado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7em;
+    height: 2em;
+    border:black 2px solid; 
+}
+.emailListado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15em;
+    height: 2em;
+    border:black 2px solid;
+    color:crimson;
 }

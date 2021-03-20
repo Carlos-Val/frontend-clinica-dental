@@ -29,12 +29,12 @@
 .seleccionDentista{
     display: flex;
     flex-direction: column;
-    width: 18em;
-    height: 5em;
+    width: 20em;
+    height: 3em;
+    
 }
 .confirmAppointment{
-    width: 18em;
-    height: 8em;
+    
     display: flex;
     flex-direction: column;
     font-weight: bold;
@@ -42,6 +42,7 @@
 
 }
 .confirmaCita{
+    margin-top: 2em;
     width: 8em;
     height: 2em;
     background-color: lightblue;
@@ -51,5 +52,16 @@
 }
 .muestraFecha{
     color: mediumblue;
+    font-size: 1.7em;
+    margin-bottom: 1em;
+
+}
+.nombre{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 2.3em;
+}
+.concertarCita{
+    margin-bottom: 1em;
 }
 

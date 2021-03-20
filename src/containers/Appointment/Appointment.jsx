@@ -5,10 +5,8 @@ import {useHistory} from 'react-router-dom';
 import axios from "axios";
 import spinergif from "../../img/spiner.gif";
 
-
-
 import  "react-datepicker/dist/react-datepicker.css" ;
-import prueba1 from "../../img/imagen.jpg";
+
 
 
 
@@ -76,16 +74,16 @@ const Appointment = (props) =>{
 
         return(
             <div className="containerAppointment">
-                <pre>{JSON.stringify(appointment,null,2)}</pre>
+                
                 <div className="nombre">
                             Hola, {props.customer.customer.nombre} {props.customer.customer.apellido1} {props.customer.customer.apellido2}
                 </div>
                 <div className="seleccionFecha">
                     Seleccione una fecha para su cita:
-                    <input className="date" type="datetime-local" title="Fecha" step="1800" min="09:00" max="19:00"  name="appointmentDate" onChange={manejaEstado}/>
+                    <input className="date" type="datetime-local" title="Fecha" step="1800" min="AAAA-MM-DDT09:00" max="AAAA-MM-DDT19:00"  name="appointmentDate" onChange={manejaEstado}/>
                 </div>
 
-                <div>Esta concertando una cita para el día</div> 
+                <div className="concertarCita">Esta concertando una cita para el día</div> 
                         <div className="muestraFecha">
                             {appointment.appointmentDate} 
                         </div>
