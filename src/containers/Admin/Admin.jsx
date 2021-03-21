@@ -10,25 +10,48 @@ const Home = () => {
         list :[]
         
     })
-    console.log("Este es el contenido de list",users.list)
+    const [appointment, setAppointment] = useState({
+        appointmentList :[]
+        
+    })
+    
 
     const getUsers = async () =>{
         let result = await axios.get(`http://localhost:3001/customers/`)
         console.log("Se esperan los clientes...", result.data)
         setUsers({...users, list: result.data})
     }
+    const getAppointments = async () =>{
+        let result = await axios.get(`http://localhost:3001/appointments/`)
+        console.log("Se esperan las citas...", result.data)
+        setAppointment({...appointment, appointmentList: result.data})
+
+    }
 
     useEffect(()=>{
         getUsers();
+        getAppointments();
            
 
     },[]);
 
+    const verClientes = () =>{
+        document.getElementById("tablaClientes").style.display="flex";
+        document.getElementById("tablaCitas").style.display="none";
+    }
+    const verCitas = () =>{
+        document.getElementById("tablaClientes").style.display="none";
+        document.getElementById("tablaCitas").style.display="flex";
+    }
+
     return(
         <div className="vistaAdmin">
-            Soy la vista Admin
-            <div className="mostrarClientes">
-                <div className="tablaClientes">
+            <div className="botonesVistas">
+                <button className="cambiaVista" onClick={()=> verClientes()}>Clientes</button>
+                <button className="cambiaVista" onClick={()=> verCitas()}>Citas</button>
+            </div>
+            <div className="mostrarClientes" >
+                <div id="tablaClientes" >
                     {
                     !users.list[0]?.nombre
                     ?
@@ -81,20 +104,16 @@ const Home = () => {
                     </>
                     }
                 </div>
+                <div id="tablaCitas">
+                    Hola, aqui las citas
+                </div>
 
             </div>
 
         </div> 
     );
 }
-{/* <div className='mapContainer'></div>
-{appointment.future?.result.map(consultation => {
-                        return (
-                            <div className='dataCollection' key={consultation.id} onClick={()=> clickMe(consultation)}>
-                                <div className='professional'>
-                                    Professional: {consultation.ProfessionalId}
-                                </div>
-                                <div className='id'><div></div> */}
+
 
 
 export default Home;

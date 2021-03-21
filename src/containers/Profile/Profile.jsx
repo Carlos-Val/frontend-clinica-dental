@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import "./Profile.css";
 import {useHistory} from 'react-router-dom';
 import axios from 'axios';
-import { DESTROY, SHOW } from "../../redux/types/appointmentsTypes";
+import { DESTROY, SHOW,} from "../../redux/types/appointmentsTypes";
 
 import Avatar, {ConfigProvider} from 'react-avatar';
 
@@ -37,7 +37,10 @@ const Profile =  (props) => {
            
 
     },[]);
-    
+
+    useEffect(()=>{
+        console.log("Actualizacion de appointments...",props.appointment);
+    });
     
     
     
