@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import {useHistory} from 'react-router-dom';
 import axios from "axios";
 import spinergif from "../../img/spiner.gif";
-
+import { CREATE} from "../../redux/types/appointmentsTypes";
 import  "react-datepicker/dist/react-datepicker.css" ;
 
 
@@ -51,6 +51,7 @@ const Appointment = (props) =>{
 
         let backData = await axios.post(`http://localhost:3001/customers/${props.customer.customer?.id}/appointments/`, body, { headers: {"Authorization" : `Bearer ${props.customer.token}`} })
         
+        props.dispatch({type: CREATE, payload: backData.data})
 
         setTimeout(()=>{
             history.push("/profile");
