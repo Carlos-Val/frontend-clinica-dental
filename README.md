@@ -61,7 +61,7 @@ Once we have the BackEnd raised, we have to raise the FrontEnd with an npm start
      height= "50px" />
      <img src="src/img/iconos/react-router.png"
      height= "50px" width="100px"/>
-     <img src="src/img/iconos/redux.png"
+     <img src="src/img/iconos/Redux.png"
      height= "50px" />
      <img src="src/img/iconos/sequelize.png"
      height= "50px" />
