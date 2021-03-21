@@ -4,7 +4,7 @@ import "./Profile.css";
 import {useHistory} from 'react-router-dom';
 import axios from 'axios';
 import { DESTROY, SHOW,} from "../../redux/types/appointmentsTypes";
-
+import spinergif from "../../img/spiner.gif";
 import Avatar, {ConfigProvider} from 'react-avatar';
 
 
@@ -101,7 +101,7 @@ const Profile =  (props) => {
                                                             Fecha de la cita : 
                                                         </div>
                                                         <div className="resultadoCita">{cita.appointmentDate}<br/></div>
-                                                            {/* Dentista: {cita.dentistId} */}
+                                                            
                                                         <button className="cancelarCita" onClick={()=>deleteAppointment(cita)}>Cancelar cita</button>
 
                                                     </div>
@@ -127,7 +127,7 @@ const Profile =  (props) => {
         return (
             <div className="vuelveHome">
                 <div>Redirigiendo a home...</div>
-                <div><img src="../../img/spinnerv.gif" alt="" className="spinner"/></div>
+                <div><img src={spinergif} alt="" className="spinner"/></div>
             </div>     
         )
     }

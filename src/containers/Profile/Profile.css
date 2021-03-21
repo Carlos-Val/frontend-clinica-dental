@@ -110,9 +110,8 @@
     justify-content: space-evenly;
 }
 .spinner{
-    display: flex;
-    width: 7em;
-    height: 7em;
+    width: 10em;
+    height: 10em;
 }
 
 .citasPersonales{
