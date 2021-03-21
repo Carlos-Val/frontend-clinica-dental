@@ -113,33 +113,30 @@ const Home = () => {
                         </>
                         :
                         <div className="allAppointments">
+                            <div className="cabecera">
+                                <div className="pintaCitasCabecera">Cita</div>
+                                <div className="pintaFechasCabecera">Fecha</div>
+                                <div className="pintaPacienteCabecera">Paciente</div>
+                            </div>
                             {appointment.appointmentList.map(item=>{
                                 return(
                                     <div key={item.id} className="listadoAppointments">
-                                        <div>
-                                            Cita #{item.id}<br/>
-                                            Fecha {item.appointmentDate}<br/>
-                                            Paciente {
+                                        
+                                            <div className="pintaCitas">#{item.id}</div>
+                                            <div className="pintaFechas">{item.appointmentDate}</div>
+                                            <div className="pintaPaciente">{
                                                 users.list.map(user=>{
                                                     if(user.id === item.customerId){
-                                                        return user.nombre
+                                                        const nombre = user.nombre
+                                                        const apellido1 = user.apellido1
+                                                        const apellido2 = user.apellido2
+                                                        return (nombre + " " + apellido1 + " " + apellido2)
+
                                                     }
                                                 })
-                                            } {
-                                                users.list.map(user=>{
-                                                    if(user.id === item.customerId){
-                                                        return user.apellido1
-                                                    }
-                                                })
-                                            } {
-                                                users.list.map(user=>{
-                                                    if(user.id === item.customerId){
-                                                        return user.apellido2
-                                                    }
-                                                })
-                                            }
-                                            
-                                        </div>
+                                            } </div>
+                                             
+                                        
                                     </div>
 
                                 )

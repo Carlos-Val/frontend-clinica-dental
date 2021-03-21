@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+<p align="center">
+  <a href="" rel="noopener">
+ <img width=200px height=200px src="https://png.pngtree.com/png-vector/20190228/ourlarge/pngtree-tooth-dental-icon-design-template-vector-illustration-png-image_710399.jpg" alt="Logo dentist"></a>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h3 align="center">Clínica Dental</h3>
 
-## Available Scripts
+<div align="center">
 
-In the project directory, you can run:
+[![Status](https://img.shields.io/badge/status-active-success.svg)]()
 
-### `npm start`
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+</div>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## 📝 Table of Contents
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [About](#about)
+- [Getting Started](#getting_started)
+- [Usage](#usage)
+- [Built Using](#built_using)
+- [Authors](#authors)
+- [Acknowledgments](#acknowledgement)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🧐 About <a name = "about"></a>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+We have created an application about a fictitious dental clinic.
+In it you can register as a client and, once registered, you log in to see your data in a profile view and you can make an appointment by choosing the day, time and dentist.
+In the user profile you can delete appointments from the client himself.
+It has an Administrator view, in which you can see all the appointments that the clinic has and all the clients that the clinic has.
 
-### `npm run eject`
+## 🏁 Getting Started <a name = "getting_started"></a>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+First of all we start the terminal of our code editor, in my case the Virtual Studio Code, and we start the default package management system for Node.js (npm) with the text npm init. Then we installed Express, MySql, Sequelize and Nodemon. All this to build the server and have a database.
+Once we have the BackEnd raised, we have to raise the FrontEnd with an npm start.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## ⛏️ Built Using <a name = "built_using"></a>
 
-## Learn More
+- [Express](https://expressjs.com/) - Server Framework
+- [Sequelize](https://sequelize.org/) - ORM Node.js
+- [NodeJs](https://nodejs.org/en/) - Server Environment
+- [MySql2](https://www.mysql.com/) - Database Service
+- [JsonWebToken](https://jwt.io/) - Npm library
+- [Bcrypt](https://www.npmjs.com/package/bcrypt) - Npm library
+- 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## ✍️ Authors <a name = "authors"></a>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [@joanbatiste](https://github.com/joanbatiste) - Idea & Work
+- [@carlosval](https://github.com/Carlos-Val) - Idea & Work
 
-### Code Splitting
+## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-  Thank you for all the help [@fbgoode](https://github.com/fbgoode) has given us, without him this would not have been possible. We owe him a few :beers:!!

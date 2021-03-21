@@ -119,6 +119,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     width: 18em;
     margin-top: 0.15em;
     margin-bottom: 0.15em;
@@ -134,6 +135,19 @@
     border-radius: 0.5em;
     font-family: 'Recursive', sans-serif;
     
+}
+
+.cancelarCita{
+    color:white;
+    background-color: red;
+    border-radius: 0.5em;
+    transition: 1s;
+
+}
+.cancelarCita:hover{
+    color:red;
+    background-color: white;
+    transition: 1s;
 }
 
 

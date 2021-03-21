@@ -50,7 +50,7 @@ const Profile =  (props) => {
             <div className="vistaProfile">
                 <div className="tarjetas">
                 <ConfigProvider colors={[]}>
-                        <Avatar className="avatar" name={props.customer.customer.nombre} size="100" textSizeRatio={1.50} />
+                        <Avatar className="avatar" name={props.customer.customer.nombre} size="80" textSizeRatio={1.65}/>
                 </ConfigProvider>
                     <div className="avatarDatos">
                         
@@ -97,13 +97,15 @@ const Profile =  (props) => {
                                             {props.appointment.map(cita=>{
                                                 return(
                                                     <div className="citasPersonales" key={cita.id}>
-                                                        <div>
-                                                            Fecha de la cita : {cita.appointmentDate}
-                                                            Dentista: {cita.dentistId}
-                                                            <button className="cancelarCita" onClick={()=>deleteAppointment(cita)}>Cancelar cita</button>
-
+                                                        <div className="cabeceraTitulo">
+                                                            Fecha de la cita : 
                                                         </div>
+                                                        <div className="resultadoCita">{cita.appointmentDate}<br/></div>
+                                                            {/* Dentista: {cita.dentistId} */}
+                                                        <button className="cancelarCita" onClick={()=>deleteAppointment(cita)}>Cancelar cita</button>
+
                                                     </div>
+                                                    
                                                 )
                                             })}
                                         </div>
