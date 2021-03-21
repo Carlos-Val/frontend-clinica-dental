@@ -16,31 +16,22 @@ function App() {
     <div className="App">
       <BrowserRouter>
 
-      <Header/>
+      <Header/> 
 
 
         <Switch>
-
-          
+        
+        
           <Route path = "/" exact component = {Home}/>
           <Route path = "/register" exact component = {Register}/>
           <Route path = "/login" exact component = {Login}/>
           <Route path = "/profile" exact component = {Profile}/>
           <Route path = "/appointments" exact component = {Appointment}/>
           <Route path = "/admin" exact component = {Admin}/>
+        
           
-      
-          
-
-
-
-         
-
-
-
-
         </Switch> 
-      
+        
       </BrowserRouter>
       
 

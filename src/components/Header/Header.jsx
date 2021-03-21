@@ -24,7 +24,7 @@ const Header = (props) =>{
         history.push("/profile");
     };
 
-    if(props.customer.customer?.nombre){
+    if(props.customer.customer?.nombre || props.admin.dataClinic?.nombre){
         return(
             <div className="componenteHeader">
     
@@ -35,7 +35,7 @@ const Header = (props) =>{
                 <div className="espacioVacioLogout"></div>
                 <div className="contenedorBotonesLogout">
                     <div onClick={()=>click()} className="saludoCliente">
-                        Bienvenid@ {props.customer.customer?.nombre}
+                        Bienvenid@ {props.customer.customer?.nombre || props.admin.dataClinic?.nombre}
                     </div>
                     <div onClick={()=> logOut()} className="logout" destino="" >Logout</div>
                     <Boton destino="" text="Home"/>
@@ -72,7 +72,9 @@ const Header = (props) =>{
 
 const mapStateToProps =state =>{
     return{
-        customer : state.customerReducer.customer
+        customer : state.customerReducer.customer,
+        admin: state.adminReducer.admin
+
     }
 };
 

@@ -90,7 +90,9 @@ const Login = (props) =>{
 
 
         let result = await axios.post( "http://localhost:3001/clinic/", body);
-        console.log(result.data);
+        console.log("=======================",result.data);
+        props.dispatch({ type: LOGIN, payload: result.data });
+
 
         if(!result.data.error){
             setTimeout(()=>{
