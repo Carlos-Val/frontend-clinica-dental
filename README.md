@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://png.pngtree.com/png-vector/20190228/ourlarge/pngtree-tooth-dental-icon-design-template-vector-illustration-png-image_710399.jpg" alt="Logo dentist"></a>
+ <img width=200px height=200px src="src/img/logo.png" alt="Logo dentist"></a>
 </p>
 
 <h3 align="center">Clínica Dental</h3>
@@ -42,13 +42,31 @@ Once we have the BackEnd raised, we have to raise the FrontEnd with an npm start
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [Express](https://expressjs.com/) - Server Framework
-- [Sequelize](https://sequelize.org/) - ORM Node.js
-- [NodeJs](https://nodejs.org/en/) - Server Environment
-- [MySql2](https://www.mysql.com/) - Database Service
-- [JsonWebToken](https://jwt.io/) - Npm library
-- [Bcrypt](https://www.npmjs.com/package/bcrypt) - Npm library
-- 
+<div style="display: flex; height: 50px">
+    <img src="src/img/iconos/axios.png"
+     height= "50px" width="100px"/>
+    <img src="src/img/iconos/css.png"
+     height= "50px" />
+    <img src="src/img/iconos/js.png"
+     height= "50px" />
+    <img src="src/img/iconos/jwt.png"
+     height= "50px" />
+    <img src="src/img/iconos/mysql2.png"
+     height= "70px" />
+    <img src="src/img/iconos/nodejs.png"
+     height= "50px" />
+     <img src="src/img/iconos/npm.png"
+     height= "50px" width="100px"/>
+     <img src="src/img/iconos/react.png"
+     height= "50px" />
+     <img src="src/img/iconos/react-router.png"
+     height= "50px" width="100px"/>
+     <img src="src/img/iconos/redux.png"
+     height= "50px" />
+     <img src="src/img/iconos/sequelize.png"
+     height= "50px" />
+
+</div>
 
 ## ✍️ Authors <a name = "authors"></a>
 
@@ -57,4 +75,4 @@ Once we have the BackEnd raised, we have to raise the FrontEnd with an npm start
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
--  Thank you for all the help [@fbgoode](https://github.com/fbgoode) has given us, without him this would not have been possible. We owe him a few :beers:!!
+-  I would like to thank all the classmates for the help they have offered us to be able to finish this project successfully. Without them this would not have happened. Thank you very much people and a lot of chill
