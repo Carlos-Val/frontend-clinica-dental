@@ -25,12 +25,21 @@ const Appointment = (props) =>{
         switch (id) {
             case 0:
                 return 'Seleccione su dentista'
+            
+
             case 1:
                 return 'Dr. Pepe García';
+            
             case 2:
+
                 return 'Dr. Manolo Cabezabolo';
+            
+
             case 3:
                 return 'Dr. Benito Camela';
+           
+            default:
+                break;
 
         }
     }  
