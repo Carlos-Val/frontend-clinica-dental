@@ -210,6 +210,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin-bottom: 0.3em;
+    
     
     
 }
@@ -220,6 +222,7 @@
     width: 7em;
     height: 2em;
     border:black 2px solid;
+    
 }
 .pintaFechas{
     display: flex;
