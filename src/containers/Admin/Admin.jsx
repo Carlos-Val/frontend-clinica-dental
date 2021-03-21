@@ -105,8 +105,49 @@ const Home = () => {
                     }
                 </div>
                 <div id="tablaCitas">
-                    Hola, aqui las citas
+                    {
+                        !appointment.appointmentList[0]?.customerId
+                        ?
+                        <>
+                        <div>Las citas no se han cargado correctamente</div>
+                        </>
+                        :
+                        <div className="allAppointments">
+                            {appointment.appointmentList.map(item=>{
+                                return(
+                                    <div key={item.id} className="listadoAppointments">
+                                        <div>
+                                            Cita #{item.id}<br/>
+                                            Fecha {item.appointmentDate}<br/>
+                                            Paciente {
+                                                users.list.map(user=>{
+                                                    if(user.id === item.customerId){
+                                                        return user.nombre
+                                                    }
+                                                })
+                                            } {
+                                                users.list.map(user=>{
+                                                    if(user.id === item.customerId){
+                                                        return user.apellido1
+                                                    }
+                                                })
+                                            } {
+                                                users.list.map(user=>{
+                                                    if(user.id === item.customerId){
+                                                        return user.apellido2
+                                                    }
+                                                })
+                                            }
+                                            
+                                        </div>
+                                    </div>
+
+                                )
+                            })}
+                        </div>
+                    }
                 </div>
+
 
             </div>
 

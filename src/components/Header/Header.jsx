@@ -21,7 +21,11 @@ const Header = (props) =>{
     };
 
     const click = () =>{
-        history.push("/profile");
+        if(props.customer.customer?.nombre){
+            return history.push("/profile");
+        }else {
+            return history.push("/admin"); 
+        }
     };
 
     if(props.customer.customer?.nombre || props.admin.dataClinic?.nombre){
