@@ -14,11 +14,14 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    
 }
 .cambiaVista{
     width: 6em;
     height: 2.5em;
     background-color: rgb(198, 218, 236);
+    font-family: 'Recursive', sans-serif;
+
 }
 #tablaClientes{
     width: 100%;
@@ -150,4 +153,87 @@
     height: 2em;
     border:black 2px solid;
     color:crimson;
+}
+
+.allAppointments{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    font-family: 'Recursive', sans-serif;
+
+}
+.cabecera{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;    
+    height: 2.7em;
+    color: rgb(8, 42, 236);
+    
+    
+}
+.pintaCitasCabecera{
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    width: 7em;
+    height: 2em;
+    border:black 2px solid;
+    background-color: rgb(152, 200, 243);
+}
+.pintaFechasCabecera{
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    width: 18em;
+    height: 2em;
+    border:black 2px solid;
+    background-color: rgb(152, 200, 243);
+}
+.pintaPacienteCabecera{
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    width: 18em;
+    height: 2em;
+    border:black 2px solid;
+    background-color: rgb(152, 200, 243);
+}
+.listadoAppointments{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.pintaCitas{
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    width: 7em;
+    height: 2em;
+    border:black 2px solid;
+}
+.pintaFechas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18em;
+    height: 2em;
+    border:black 2px solid;
+}
+.pintaPaciente{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18em;
+    height: 2em;
+    border:black 2px solid;
 }
