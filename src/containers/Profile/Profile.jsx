@@ -30,6 +30,7 @@ const Profile =  (props) => {
         let elimina = await axios.delete( `http://localhost:3001/customers/${props.customer.customer?.id}/appointments/${cita.id}/`, { headers: {"Authorization" : `Bearer ${props.customer.token}`} });
         console.log("esta es la cita a eliminar",elimina);
         props.dispatch({type: DESTROY, payload: elimina.data});
+        traerCitas();
     }    
 
     useEffect(()=>{
